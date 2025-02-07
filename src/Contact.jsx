@@ -32,8 +32,8 @@ const Contact = () => {
           {/* WhatsApp */}
           <div className="flex items-center gap-4">
             <i className="fa-brands fa-whatsapp text-2xl text-[#DAFF98]"></i>
-            <a href="https://wa.me/11234567890" className="text-lg hover:underline">
-              WhatsApp: +1 (234) 567-890
+            <a href="https://wa.me/01726649175" className="text-lg hover:underline">
+              WhatsApp: 01726649175
             </a>
           </div>
         </div>

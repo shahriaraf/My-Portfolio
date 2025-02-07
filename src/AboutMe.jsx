@@ -10,7 +10,7 @@ const AboutMe = () => {
       <div className="max-w-screen-xl mx-auto px-6 pt-10 grid md:grid-cols-2 gap-10 items-center">
 
         {/* Left Side - Image */}
-        <div className="flex justify-center">
+        <div className="hidden lg:flex justify-center ">
           <img
             src={myPhoto}
             alt="Shahriar Araf"

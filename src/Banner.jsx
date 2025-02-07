@@ -26,7 +26,7 @@ const Banner = () => {
                     >
                         {/* GitHub Link */}
                         <a
-                            href="https://github.com/your-profile"
+                            href="https://github.com/shahriaraf"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-[#DAFF98] text-3xl sm:text-4xl p-4 rounded-full shadow-lg transition duration-300"
@@ -36,7 +36,7 @@ const Banner = () => {
 
                         {/* LinkedIn Link */}
                         <a
-                            href="https://www.linkedin.com/in/your-profile"
+                            href="https://www.linkedin.com/in/shoumo-shahriar-araf"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-[#DAFF98] text-3xl sm:text-4xl p-4 rounded-full shadow-lg transition duration-300"
@@ -46,7 +46,7 @@ const Banner = () => {
 
                         {/* Facebook Link */}
                         <a
-                            href="https://facebook.com/your-profile"
+                            href="https://www.facebook.com/shahriar.araf.3"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-[#DAFF98] text-3xl sm:text-4xl p-4 rounded-full shadow-lg transition duration-300"
@@ -57,8 +57,12 @@ const Banner = () => {
                 </motion.div>
 
                 {/* Profile Image with Animated Border as Background */}
-                <div className="relative lg:w-[400px] lg:h-[400px] w-full h-full sm:w-80 sm:h-80 rounded-full bg-cover bg-center border-2 sm:border-2 border-[#DAFF98] shadow-lg" style={{ backgroundImage: `url(${myPhoto})` }}>
+                <div
+                    className="relative w-[250px] h-[250px] sm:w-80 sm:h-80 lg:w-[400px] lg:h-[400px] rounded-full bg-cover bg-center border-2 sm:border-2 border-[#DAFF98] shadow-lg"
+                    style={{ backgroundImage: `url(${myPhoto})` }}
+                >
                 </div>
+
             </div>
         </div>
     );
