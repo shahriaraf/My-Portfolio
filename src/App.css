@@ -14,6 +14,57 @@
   .animate-spin-slow {
     animation: spinRing 4s linear infinite;
   }
+
+  .li{
+    position: relative;
+    z-index: 1;
+    background: #DAFF98;
+  }
   
+  .li::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: -1;
+    transform-origin: left;
+    transition: transform 0.5s ease;
+    transform: scale(1);
+  }
+
+  .li:hover::before {
+    transform-origin: right;
+    transition: transform 0.5s ease;
+    transform: scale(0);
+  }
+  
+  button{
+    position: relative;
+    z-index: 1;
+    background: #DAFF98;
+  }
+  
+  button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: -1;
+    transform-origin: left;
+    transition: transform 0.5s ease;
+    transform: scale(1);
+  }
+
+  button:hover::before {
+    transform-origin: right;
+    transition: transform 0.5s ease;
+    transform: scale(0);
+  }
 
 

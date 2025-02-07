@@ -63,7 +63,7 @@ const Projects = () => {
                   href={project.liveLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-[#052E25] hover:underline"
+                  className="text-sm hover:underline"
                 >
                   Live Demo
                 </a>
@@ -71,7 +71,7 @@ const Projects = () => {
                   href={project.githubLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-[#052E25] hover:underline"
+                  className="text-sm hover:underline"
                 >
                   GitHub Repo
                 </a>

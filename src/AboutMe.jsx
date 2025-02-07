@@ -1,61 +1,50 @@
 import React from 'react';
-import { motion } from 'framer-motion';  // Import Framer Motion for animations
+import myPhoto from './assets/1738690845720.jpg';
 
 const AboutMe = () => {
   return (
     <div className="text-[#698580] py-16 mt-24">
-      <div className="max-w-screen-xl mx-auto px-6 pt-10">
-        
-        {/* Title with animation */}
-        <motion.h2
-          className="text-4xl text-center text-[#698580] font-semibold mb-6"
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-        >
-          About Me
-        </motion.h2>
-        
-        {/* Introduction paragraph with animation */}
-        <motion.p
-          className="text-lg leading-relaxed mb-4"
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1, delay: 0.2 }}
-        >
-          Hi, I'm [Your Name], a passionate Web Developer with a love for crafting engaging and dynamic digital experiences. My programming journey began a few years ago when I decided to combine my creative problem-solving skills with technology to build useful and user-friendly websites. What started as a curiosity quickly turned into a full-fledged passion for frontend development.
-        </motion.p>
+      <h2 className="text-4xl text-[#DAFF98] font-semibold text-center mb-8">
+        About Me
+      </h2>
+      <div className="max-w-screen-xl mx-auto px-6 pt-10 grid md:grid-cols-2 gap-10 items-center">
 
-        {/* Work type and tech stack paragraph with animation */}
-        <motion.p
-          className="text-lg leading-relaxed mb-4"
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1, delay: 0.4 }}
-        >
-          I enjoy working with JavaScript and React to bring innovative ideas to life. There's something satisfying about building sleek, intuitive interfaces that users can easily interact with. I find the challenge of creating responsive designs and optimizing user experience to be both rewarding and exciting. I love keeping up with new web technologies and continuously learning to improve my skills.
-        </motion.p>
+        {/* Left Side - Image */}
+        <div className="flex justify-center">
+          <img
+            src={myPhoto}
+            alt="Shahriar Araf"
+            className="w-96 h-96 object-cover rounded-lg border-2 border-[#DAFF98] shadow-lg"
+          />
+        </div>
 
-        {/* Hobbies and interests paragraph with animation */}
-        <motion.p
-          className="text-lg leading-relaxed mb-4"
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1, delay: 0.6 }}
-        >
-          Outside of coding, I’m an avid [insert hobby, e.g., photographer, gamer, traveler, painter, etc.]. Whether it's spending time in nature, playing [insert sport, e.g., basketball], or experimenting with new creative projects, I believe it's important to maintain a healthy balance between work and play. These activities fuel my creativity and allow me to approach challenges with fresh perspectives.
-        </motion.p>
+        {/* Right Side - Content */}
+        <div>
 
-        {/* Closing paragraph with animation */}
-        <motion.p
-          className="text-lg leading-relaxed mb-4"
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1, delay: 0.8 }}
-        >
-          I'm always open to new projects and collaborations, and I’m looking forward to connecting with others who share my passion for building meaningful web experiences. If you're interested in working together or just want to chat about web development, feel free to reach out. Let's create something amazing together!
-        </motion.p>
-        
+
+          <p className="text-lg leading-relaxed mb-6">
+            Hi, I'm <span className="font-semibold text-[#DAFF98]">Shahriar Araf</span>, a passionate Web Developer dedicated to crafting engaging and dynamic digital experiences.
+          </p>
+
+          {/* What I Do */}
+          <h3 className="text-2xl text-[#DAFF98] font-semibold mb-4">What I Do:</h3>
+          <ul className="list-disc pl-6 space-y-3 text-lg">
+            <li>Specialized in <span className="font-semibold text-[#DAFF98]">JavaScript, React, and Tailwind CSS</span>.</li>
+            <li>Passionate about creating sleek, intuitive, and responsive user interfaces.</li>
+            <li>Constantly learning and exploring new web technologies.</li>
+          </ul>
+
+          {/* Interests & Hobbies */}
+          <h3 className="text-2xl text-[#DAFF98] font-semibold mt-6 mb-4">Beyond Coding:</h3>
+          <ul className="list-disc pl-6 space-y-3 text-lg">
+            <li>📸 Photography enthusiast, capturing moments through my lens.</li>
+            <li>🎮 Gamer who enjoys strategic games like Chess.</li>
+            <li>✈️ Love traveling, exploring new cultures, and experiencing diverse perspectives.</li>
+            <li>🎨 Passionate about painting and creative arts.</li>
+            <li>🏏 Sports lover—Cricket, Football, and Chess keep me active.</li>
+          </ul>
+        </div>
+
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';  // Import Framer Motion
-import myPhoto from './assets/1738690845720.jpg';
+import myPhoto from './assets/1738929235905-removebg-preview.png';
 import './App.css';
 
 const Banner = () => {
@@ -14,7 +14,8 @@ const Banner = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1 }}
                 >
-                    <h1 className="text-4xl sm:text-6xl font-bold mb-6">Web Developer</h1>
+                    <h1 className="text-5xl sm:text-6xl font-bold text-white mb-6">Hello! <br />I'm <span className='text-[#DAFF98]'>Shahriar Araf</span></h1>
+                    <h1 className="text-5xl sm:text-6xl font-bold mb-6">Web Developer</h1>
                     <p className="text-lg sm:text-xl text-[#698580]">Building sleek, user-friendly interfaces for a better web experience.</p>
                     {/* Animated Social Links */}
                     <motion.div
@@ -56,7 +57,7 @@ const Banner = () => {
                 </motion.div>
 
                 {/* Profile Image with Animated Border as Background */}
-                <div className="relative w-64 h-64 sm:w-80 sm:h-80 rounded-md bg-cover bg-center border-2 sm:border-4 border-[#DAFF98] shadow-lg" style={{ backgroundImage: `url(${myPhoto})` }}>
+                <div className="relative lg:w-[400px] lg:h-[400px] w-full h-full sm:w-80 sm:h-80 rounded-full bg-cover bg-center border-2 sm:border-2 border-[#DAFF98] shadow-lg" style={{ backgroundImage: `url(${myPhoto})` }}>
                 </div>
             </div>
         </div>

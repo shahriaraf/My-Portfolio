@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-scroll";
 import { Menu, X } from "lucide-react"; // Mobile menu icon and close icon
+import "./App.css";
 
 const Navbar = ({ onSetActive }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false); // State for toggling mobile menu visibility
@@ -15,7 +16,7 @@ const Navbar = ({ onSetActive }) => {
 
                     {/* Desktop Menu */}
                     <ul className="hidden sm:flex justify-center space-x-6 py-4">
-                        <li>
+                        <li className="li"> 
                             <Link
                                 to="banner"
                                 smooth={true}
@@ -26,7 +27,7 @@ const Navbar = ({ onSetActive }) => {
                                 Home
                             </Link>
                         </li>
-                        <li>
+                        <li  className="li">
                             <Link
                                 to="about"
                                 smooth={true}
@@ -37,7 +38,7 @@ const Navbar = ({ onSetActive }) => {
                                 About
                             </Link>
                         </li>
-                        <li>
+                        <li  className="li">
                             <Link
                                 to="skills"
                                 smooth={true}
@@ -48,7 +49,7 @@ const Navbar = ({ onSetActive }) => {
                                 Skills
                             </Link>
                         </li>
-                        <li>
+                        <li  className="li">
                             <Link
                                 to="projects"
                                 smooth={true}
@@ -59,7 +60,7 @@ const Navbar = ({ onSetActive }) => {
                                 Projects
                             </Link>
                         </li>
-                        <li>
+                        <li  className="li">
                             <Link
                                 to="contact"
                                 smooth={true}
@@ -76,7 +77,7 @@ const Navbar = ({ onSetActive }) => {
                 </div>
                 {/* Resume Button */}
                 <div className="hidden sm:block">
-                    <button className="border-[1px] px-4 py-2 border-[#698580] text-[#DAFF98]">
+                    <button className="border-[1px] px-4 py-2 hover:text-black border-[#698580] text-[#DAFF98]">
                         Resume
                     </button>
                 </div>
