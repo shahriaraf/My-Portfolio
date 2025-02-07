@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+/* Keyframe for the spinning animation */
+@keyframes spinRing {
+    0% {
+      transform: rotate(5deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Apply animation to create a spinning ring effect */
+  .animate-spin-slow {
+    animation: spinRing 4s linear infinite;
+  }
+  
+
+
