@@ -62,6 +62,11 @@ const Banner = () => {
                     style={{ backgroundImage: `url(${myPhoto})` }}
                 >
                 </div>
+                <div className="lg:hidden inline mt-5">
+                    <button className="border-[1px] px-4 py-2 hover:text-black border-[#698580] text-[#DAFF98]">
+                        Resume
+                    </button>
+                </div>
 
             </div>
         </div>
