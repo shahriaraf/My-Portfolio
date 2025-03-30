@@ -91,11 +91,19 @@ const Banner = () => {
                 <div className="relative profile-img w-[300px] h-[300px] md:w-[400px] md:h-[400px] rounded-full bg-cover bg-center border-2 border-[#85C5FF] shadow-lg"
                     style={{ backgroundImage: `url(${myPhoto})` }}>
                 </div>
-
-                <div className="lg:hidden inline mt-5">
-                    <button className="border-[1px] px-4 py-2 hover:text-black border-[#5c81a3] text-[#85C5FF]">
-                        Resume
-                    </button>
+                <div className="md:hidden inline-block">
+                    <div className="md:hidden inline-block">
+                        <button
+                            className="border-[1px] flex items-center gap-2 px-4 py-2 
+                 border-[#5c81a3] text-[#85C5FF] hover:text-black
+                 focus:text-black active:text-black"
+                            onTouchStart={(e) => e.currentTarget.classList.add("text-black")}
+                            onTouchEnd={(e) => e.currentTarget.classList.remove("text-black")}
+                        >
+                            Resume
+                            <span><i className="fa-solid fa-arrow-down"></i></span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
