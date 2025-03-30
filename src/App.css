@@ -77,8 +77,6 @@
   }
   
   .profile-img {
-    height: 400px;
-    width: 400px;
     border-radius: 50%;
     object-fit: cover;
     border: 2px solid var(--accent);

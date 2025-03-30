@@ -48,13 +48,13 @@ const Banner = () => {
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1 }}
                 >
-                    <h1 className="text-3xl md:text-6xl font-bold text-white mb-6">
+                    <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                         Hello! <br />I'm <span className='text-[#85C5FF]'>Shahriar Araf</span>
                     </h1>
 
                     {/* Animated Role Text with Fade-In & Fade-Out */}
                     <motion.div
-                        className="inline-flex text-2xl md:text-5xl gap-2 sm:gap-3 rounded-xl sm:rounded-2xl mb-6 sm:mb-8 backdrop-blur-sm"
+                        className="inline-flex text-3xl md:text-5xl gap-2 sm:gap-3 rounded-xl sm:rounded-2xl mb-6 sm:mb-8 backdrop-blur-sm"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ duration: 1 }}
@@ -64,7 +64,7 @@ const Banner = () => {
                     </motion.div>
 
 
-                    <p className="text-sm md:text-xl w-3/4 md:w-full m-auto text-[#5c81a3]">
+                    <p className="text-lg md:text-xl w-3/4 md:w-full m-auto text-[#5c81a3]">
                         Building sleek, user-friendly interfaces for a better web experience.
                     </p>
 
@@ -88,12 +88,12 @@ const Banner = () => {
                 </motion.div>
 
                 {/* Profile Image */}
-                <div className="relative profile-img w-[200px] h-[200px] md:w-[250px] md:h-[250px] sm:w-80 sm:h-80 lg:w-[400px] lg:h-[400px] rounded-full bg-cover bg-center border-2 border-[#DAFF98] shadow-lg"
+                <div className="relative profile-img w-[300px] h-[300px] md:w-[400px] md:h-[400px] rounded-full bg-cover bg-center border-2 border-[#85C5FF] shadow-lg"
                     style={{ backgroundImage: `url(${myPhoto})` }}>
                 </div>
 
                 <div className="lg:hidden inline mt-5">
-                    <button className="border-[1px] px-4 py-2 hover:text-black border-[#698580] text-[#DAFF98]">
+                    <button className="border-[1px] px-4 py-2 hover:text-black border-[#5c81a3] text-[#85C5FF]">
                         Resume
                     </button>
                 </div>

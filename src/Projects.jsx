@@ -36,7 +36,7 @@ const Projects = () => {
   return (
     <div className="py-40" style={backgroundImageu}>
       <p className="text-4xl text-[#85C5FF] text-center">Projects</p>
-        <div className="grid grid-cols-1 md:grid-cols-3 py-10 gap-8 mx-auto px-3 md:px-20 ">
+        <div className="grid grid-cols-1 md:grid-cols-3 py-10 gap-8 mx-auto px-8 md:px-20 ">
       {projects.map((project, index) => (
         <motion.div
           key={index}
