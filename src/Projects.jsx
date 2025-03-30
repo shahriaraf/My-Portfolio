@@ -30,7 +30,7 @@ const Projects = () => {
   const backgroundImageu = {
     backgroundImage: "url('https://i.ibb.co.com/Hf6xBZCq/Lovepik-com-605760272-Black-technology-sense-grid-dotted-line.jpg')",
     backgroundSize: "cover",
-    backgroundPosition: "start",
+    backgroundPosition: "center",
   };
 
   return (
