@@ -40,7 +40,7 @@ const Projects = () => {
       {projects.map((project, index) => (
         <motion.div
           key={index}
-          className="relative w-full rounded-lg rounded-bl-[60px] border-[#85C5FF] border cursor-pointer group bg-black shadow-lg"
+          className="relative w-full rounded-bl-[60px] border-[#85C5FF] border cursor-pointer group bg-black shadow-lg"
           whileHover={{ scale: 1.05 }}
         >
           {/* Image Container with Full Height Scroll on Hover */}
@@ -48,7 +48,7 @@ const Projects = () => {
             <motion.img
               src={project.image}
               alt={project.name}
-              className="absolute rounded-t-lg top-0 left-0 w-full h-auto bg-black"
+              className="absolute top-0 left-0 w-full h-auto bg-black"
               initial={{ y: 0 }}
               whileHover={{ y: "-100%" }} // Move up to reveal full height
               transition={{ duration: 5, ease: "easeInOut" }} // Smooth scrolling effect
