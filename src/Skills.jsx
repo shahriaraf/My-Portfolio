@@ -72,7 +72,7 @@ const Skills = () => {
       <p className='text-center text-4xl text-[#85C5FF]'>Skills</p>
       <div className="flex items-center justify-center h-screen text-white relative">
         <div className="absolute w-60 h-60 flex items-center justify-center rounded-full text-center text-xl font-bold shadow-lg z-10">
-          <div className='w-40 h-40 md:w-full md:h-full'>
+          <div className='w-44 h-44 md:w-full md:h-full'>
           <Lottie options={options} />
           </div>
          
@@ -90,7 +90,7 @@ const Skills = () => {
                 style={{ transform: `translate(${x}px, ${y}px)` }}
                 transition={{ repeat: Infinity, duration: 10, ease: 'linear' }}
               >
-                <img src={skill.logo} alt={skill.name} className="w-7 h-7 md:w-11 md:h-11 rounded-xl" style={{ backgroundColor: skill.bg }} />
+                <img src={skill.logo} alt={skill.name} className="w-8 h-8 md:w-11 md:h-11 rounded-xl" style={{ backgroundColor: skill.bg }} />
               </motion.div>
             );
           })}
