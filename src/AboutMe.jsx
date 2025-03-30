@@ -2,10 +2,15 @@ import React from 'react';
 import myPhoto from './assets/1738690845720.jpg';
 
 const AboutMe = () => {
+  const backgroundImageu = {
+    backgroundImage: "url('https://i.ibb.co.com/Hf6xBZCq/Lovepik-com-605760272-Black-technology-sense-grid-dotted-line.jpg')",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+};
   return (
-    <div className="text-[#698580] py-16 mt-24">
-      <h2 className="text-4xl text-[#DAFF98] font-semibold text-center mb-8">
-        About Me
+    <div className="text-[#5c81a3] py-16 pt-24" style={backgroundImageu}>
+      <h2 className="text-4xl text-[#85C5FF] text-center mb-8">
+        About
       </h2>
       <div className="max-w-screen-xl mx-auto px-6 pt-10 grid md:grid-cols-2 gap-10 items-center">
 
@@ -14,7 +19,7 @@ const AboutMe = () => {
           <img
             src={myPhoto}
             alt="Shahriar Araf"
-            className="w-96 h-96 object-cover rounded-lg border-2 border-[#DAFF98] shadow-lg"
+            className="w-96 h-96 object-cover rounded-lg border-2 border-[#85C5FF] shadow-lg"
           />
         </div>
 
@@ -23,19 +28,19 @@ const AboutMe = () => {
 
 
           <p className="text-lg leading-relaxed mb-6">
-            Hi, I'm <span className="font-semibold text-[#DAFF98]">Shahriar Araf</span>, a passionate Web Developer dedicated to crafting engaging and dynamic digital experiences.
+            Hi, I'm <span className="font-semibold text-[#85C5FF]">Shahriar Araf</span>, a passionate Web Developer dedicated to crafting engaging and dynamic digital experiences.
           </p>
 
           {/* What I Do */}
-          <h3 className="text-2xl text-[#DAFF98] font-semibold mb-4">What I Do:</h3>
+          <h3 className="text-2xl text-[#85C5FF] font-semibold mb-4">What I Do:</h3>
           <ul className="list-disc pl-6 space-y-3 text-lg">
-            <li>Specialized in <span className="font-semibold text-[#DAFF98]">JavaScript, React, and Tailwind CSS</span>.</li>
+            <li>Specialized in <span className="font-semibold text-[#85C5FF]">JavaScript, React, and Tailwind CSS</span>.</li>
             <li>Passionate about creating sleek, intuitive, and responsive user interfaces.</li>
             <li>Constantly learning and exploring new web technologies.</li>
           </ul>
 
           {/* Interests & Hobbies */}
-          <h3 className="text-2xl text-[#DAFF98] font-semibold mt-6 mb-4">Beyond Coding:</h3>
+          <h3 className="text-2xl text-[#85C5FF] font-semibold mt-6 mb-4">Beyond Coding:</h3>
           <ul className="list-disc pl-6 space-y-3 text-lg">
             <li>📸 Photography enthusiast, capturing moments through my lens.</li>
             <li>🎮 Gamer who enjoys strategic games like Chess.</li>

@@ -1,94 +1,97 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
+import { CgWebsite } from "react-icons/cg";
+import { FaGithub } from "react-icons/fa";
 
 const Projects = () => {
-  // Example project data
   const projects = [
     {
-      name: "Movie Mania",
-      image: "https://i.ibb.co.com/SwNGsR06/movie-mania-screenshot.png",
-      liveLink: "https://movie-mania-4fc5b.web.app/",
-      githubLink: "https://github.com/shahriaraf/movie-mania-client",
-      techStack: "React, Node.js, Express, JavaScript, Firebase, MongoDB",
-      description: "A web application for managing tasks and schedules.",
-      challenges: "A Movie sharing website. Explore the updated movies and series.",
-      improvements: "Adding more features like notifications and user roles.",
-    },
-    {
-      name: "Foodistic",
-      image: "https://i.ibb.co.com/3mM1tRZz/foodistic-screenshot.png",
+      name: "Home Bite",
+      image: "https://i.ibb.co.com/0RvPhb33/foodistic-3494a-web-app-1.png",
       liveLink: "https://foodistic-3494a.web.app/",
       githubLink: "https://github.com/shahriaraf/foodistic-client",
-      techStack: "React, Express, Node.js, JavaScript, Firebase, MongoDB",
       description: "A food sharing website. Explore and share food to us.",
-      challenges: "Managing foods for different users",
-      improvements: "Improving performance and adding search filters.",
     },
     {
       name: "Pet Haven",
-      image: "https://i.ibb.co.com/8ns6s0k7/pet-haven-screenshot.png",
+      image: "https://i.ibb.co.com/vCPgRbVV/pet-haven-8d5ba-web-app.png",
       liveLink: "https://pet-haven-8d5ba.web.app/",
       githubLink: "https://github.com/shahriaraf/pet-haven-client",
-      techStack: "React, Express, Node.js, JavaScript, Firebase, MongoDB",
       description: "This is about adopting pets and donating for pets.",
-      challenges: "Building a responsive layout and handling media uploads.",
-      improvements: "Implementing messaging features and real-time updates.",
     },
+    {
+      name: "Movie Mania",
+      image: "https://i.ibb.co.com/0RvPhb33/foodistic-3494a-web-app-1.png",
+      liveLink: "https://movie-mania-4fc5b.web.app/",
+      githubLink: "https://github.com/shahriaraf/movie-mania-client",
+      description: "A food sharing website. Explore and share food to us.",
+    }
   ];
+  const backgroundImageu = {
+    backgroundImage: "url('https://i.ibb.co.com/Hf6xBZCq/Lovepik-com-605760272-Black-technology-sense-grid-dotted-line.jpg')",
+    backgroundSize: "cover",
+    backgroundPosition: "start",
+  };
 
   return (
-    <motion.section
-      className=" text-[#698580] py-16 mt-24"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.6 }}
-    >
-      <div className="max-w-screen-xl mx-auto px-6 pt-10">
-        <h2 className="text-4xl font-semibold text-center mb-20">My Projects</h2>
+    <div className="py-40" style={backgroundImageu}>
+      <p className="text-4xl text-[#85C5FF] text-center">Projects</p>
+        <div className="grid grid-cols-1 md:grid-cols-3 py-10 gap-8 mx-auto md:px-20 ">
+      {projects.map((project, index) => (
+        <motion.div
+          key={index}
+          className="relative w-full rounded-lg rounded-bl-[60px] border-[#85C5FF] border cursor-pointer group bg-black shadow-lg"
+          whileHover={{ scale: 1.05 }}
+        >
+          {/* Image Container with Full Height Scroll on Hover */}
+          <div className="relative w-full h-80 overflow-hidden">
+            <motion.img
+              src={project.image}
+              alt={project.name}
+              className="absolute rounded-t-lg top-0 left-0 w-full h-auto bg-black"
+              initial={{ y: 0 }}
+              whileHover={{ y: "-100%" }} // Move up to reveal full height
+              transition={{ duration: 5, ease: "easeInOut" }} // Smooth scrolling effect
+            />
+          </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
-            <motion.div
-              key={index}
-              className="border-2 border-transparent hover:border-[#DAFF98] p-4 rounded-lg shadow-lg transition-all duration-300"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              transition={{ duration: 0.3 }}
+          {/* Project Info */}
+          <div className="text-center mt-4">
+            <h3 className="text-xl text-[#85C5FF] font-semibold">{project.name}</h3>
+            <p className="text-sm text-[#5c81a3] mt-2 mb-4">{project.description}</p>
+          </div>
+
+          {/* Links at the Bottom */}
+          <div className="flex border-[#85C5FF] border-t items-center justify-around ">
+          <div className="mt-4 flex justify-center items-center gap-2 pt-3 pb-6">
+            <CgWebsite className="text-xl"></CgWebsite>
+            <a
+              href={project.liveLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-green-600 font-semibold hover:underline"
+            > Live Demo
+            </a>
+          </div>
+          <div className="mt-4 flex justify-center items-center gap-2 pt-3 pb-6">
+            <a
+              href={project.githubLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 font-semibold hover:underline"
             >
-              <img src={project.image} alt={project.name} className="w-full h-60 object-cover rounded-lg" />
-              <h3 className="text-xl font-semibold mt-4">{project.name}</h3>
-              <p className="text-md mt-2 text-[#698580]">{project.description}</p>
-              <div className="mt-4 flex justify-between items-center">
-                <a
-                  href={project.liveLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm hover:underline"
-                >
-                  Live Demo
-                </a>
-                <a
-                  href={project.githubLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm hover:underline"
-                >
-                  GitHub Repo
-                </a>
-              </div>
-              <div className="mt-6">
-                <a
-                  href={`/project/${project.name.toLowerCase().replace(/\s+/g, '-')}`}
-                  className="bg-[#DAFF98] text-[#052E25] py-2 font-semibold px-6 rounded-lg mt-4 inline-block"
-                >
-                  View More
-                </a>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-    </motion.section>
+              GitHub
+            </a>
+            <FaGithub className="text-xl text-gray-400" />
+
+          </div>
+          </div>
+         
+        </motion.div>
+      ))}
+    </div>
+    </div>
+  
   );
 };
 

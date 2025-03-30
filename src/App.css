@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+
+
+
 /* Keyframe for the spinning animation */
 @keyframes spinRing {
     0% {
@@ -18,7 +21,8 @@
   .li{
     position: relative;
     z-index: 1;
-    background: #DAFF98;
+    background: #85C5FF;
+    color: #5c81a3 ;
   }
   
   .li::before {
@@ -44,7 +48,7 @@
   button{
     position: relative;
     z-index: 1;
-    background: #DAFF98;
+    background: #85C5FF;
   }
   
   button::before {
@@ -66,5 +70,46 @@
     transition: transform 0.5s ease;
     transform: scale(0);
   }
+
+  :root {
+    --accent: #85C5FF; /* Primary accent color */
+    --accent-glow: #85C5FF; /* Light green glowing color */
+  }
+  
+  .profile-img {
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--accent);
+    box-shadow: 0 0 30px var(--accent-glow);
+    animation: float 3s ease-in-out infinite, glow 2.5s alternate infinite; /* Floating + Pulsating Glow */
+    filter: grayscale(0.2) contrast(1.1);
+    will-change: transform, filter, box-shadow;
+    transition: filter 0.3s ease;
+  }
+  
+  .profile-img:hover {
+    filter: grayscale(0) contrast(1.2);
+  }
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(20px);
+    }
+  }
+  
+  @keyframes glow {
+    0% {
+      box-shadow: 0 0 10px var(--accent-glow);
+    }
+    100% {
+      box-shadow: 0 0 40px var(--accent-glow);
+    }
+  }
+  
 
 

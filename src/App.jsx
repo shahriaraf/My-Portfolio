@@ -10,6 +10,10 @@ import Navbar from "./Navbar";
 import Projects from "./Projects";
 import Skills from "./Skills";
 
+
+
+
+
 function App() {
   const [activeSection, setActiveSection] = useState(""); // Track active section
 
@@ -25,6 +29,8 @@ function App() {
 
   return (
     <div>
+     
+    
       <Navbar onSetActive={handleSetActive} />
 
       <Element name="banner">

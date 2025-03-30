@@ -12,11 +12,11 @@ const Navbar = ({ onSetActive }) => {
         <nav className="sticky top-0 w-full bg-black z-50 px-6 sm:px-28 pt-4">
             <div className="flex justify-between items-center">
                 <div className="flex items-center gap-6 w-full">
-                    <div className="text-3xl text-[#DAFF98] tiny5-regular">ARAF</div>
+                    <div className="text-3xl text-[#85C5FF] tiny5-regular">ARAF</div>
 
                     {/* Desktop Menu */}
                     <ul className="hidden sm:flex justify-center space-x-6 py-4">
-                        <li className="li"> 
+                        <li className="li hover:text-black">
                             <Link
                                 to="banner"
                                 smooth={true}
@@ -27,7 +27,7 @@ const Navbar = ({ onSetActive }) => {
                                 Home
                             </Link>
                         </li>
-                        <li  className="li">
+                        <li className="li">
                             <Link
                                 to="about"
                                 smooth={true}
@@ -38,7 +38,7 @@ const Navbar = ({ onSetActive }) => {
                                 About
                             </Link>
                         </li>
-                        <li  className="li">
+                        <li className="li">
                             <Link
                                 to="skills"
                                 smooth={true}
@@ -49,7 +49,7 @@ const Navbar = ({ onSetActive }) => {
                                 Skills
                             </Link>
                         </li>
-                        <li  className="li">
+                        <li className="li">
                             <Link
                                 to="projects"
                                 smooth={true}
@@ -60,7 +60,7 @@ const Navbar = ({ onSetActive }) => {
                                 Projects
                             </Link>
                         </li>
-                        <li  className="li">
+                        <li className="li">
                             <Link
                                 to="contact"
                                 smooth={true}
@@ -77,17 +77,27 @@ const Navbar = ({ onSetActive }) => {
                 </div>
                 {/* Resume Button */}
                 <div className="hidden sm:block">
-                    <button className="border-[1px] px-4 py-2 hover:text-black border-[#698580] text-[#DAFF98]">
-                        Resume
-                    </button>
+                    <div className="hidden sm:block">
+                        <button
+                            className="border-[1px] flex items-center gap-2 px-4 py-2 
+                 border-[#5c81a3] text-[#85C5FF] hover:text-black
+                 focus:text-black active:text-black"
+                            onTouchStart={(e) => e.currentTarget.classList.add("text-black")}
+                            onTouchEnd={(e) => e.currentTarget.classList.remove("text-black")}
+                        >
+                            Resume
+                            <span><i className="fa-solid fa-arrow-down"></i></span>
+                        </button>
+                    </div>
                 </div>
+
                 {/* Mobile Menu Icon */}
                 <div className="sm:hidden">
                     <button onClick={toggleMenu}>
                         {isMenuOpen ? (
-                            <X className="text-white" size={32} />
+                            <X className="text-[#85C5FF]" size={32} />
                         ) : (
-                            <Menu className="text-white" size={32} />
+                            <Menu className="text-[#85C5FF]" size={32} />
                         )}
                     </button>
                 </div>
@@ -102,7 +112,7 @@ const Navbar = ({ onSetActive }) => {
                         smooth={true}
                         duration={500}
                         onSetActive={() => onSetActive("banner")}
-                        className="cursor-pointer font-semibold text-sm uppercase tracking-wide p-2 text-[#DAFF98]"
+                        className="cursor-pointer font-semibold text-sm uppercase tracking-wide p-2 text-[#5c81a3]"
                     >
                         Home
                     </Link>
@@ -111,7 +121,7 @@ const Navbar = ({ onSetActive }) => {
                         smooth={true}
                         duration={500}
                         onSetActive={() => onSetActive("about")}
-                        className="cursor-pointer font-semibold text-sm uppercase tracking-wide p-2 text-[#DAFF98]"
+                        className="cursor-pointer font-semibold text-sm uppercase tracking-wide p-2 text-[#5c81a3]"
                     >
                         About
                     </Link>
@@ -120,7 +130,7 @@ const Navbar = ({ onSetActive }) => {
                         smooth={true}
                         duration={500}
                         onSetActive={() => onSetActive("skills")}
-                        className="cursor-pointer font-semibold text-sm uppercase tracking-wide p-2 text-[#DAFF98]"
+                        className="cursor-pointer font-semibold text-sm uppercase tracking-wide p-2 text-[#5c81a3]"
                     >
                         Skills
                     </Link>
@@ -129,7 +139,7 @@ const Navbar = ({ onSetActive }) => {
                         smooth={true}
                         duration={500}
                         onSetActive={() => onSetActive("projects")}
-                        className="cursor-pointer font-semibold text-sm uppercase tracking-wide p-2 text-[#DAFF98]"
+                        className="cursor-pointer font-semibold text-sm uppercase tracking-wide p-2 text-[#5c81a3]"
                     >
                         Projects
                     </Link>
@@ -138,7 +148,7 @@ const Navbar = ({ onSetActive }) => {
                         smooth={true}
                         duration={500}
                         onSetActive={() => onSetActive("contact")}
-                        className="cursor-pointer font-semibold text-sm uppercase tracking-wide p-2 text-[#DAFF98]"
+                        className="cursor-pointer font-semibold text-sm uppercase tracking-wide p-2 text-[#5c81a3]"
                     >
                         Contact
                     </Link>
