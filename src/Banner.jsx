@@ -32,8 +32,8 @@ const Banner = () => {
         }
     }, [charIndex, currentRoleIndex, roles]);
     const backgroundImageu = {
-        backgroundImage: "url('https://i.ibb.co.com/Hf6xBZCq/Lovepik-com-605760272-Black-technology-sense-grid-dotted-line.jpg')",
-        backgroundSize: "cover",
+        backgroundImage: "url('https://i.ibb.co.com/ynf2kph9/starsky1.jpg')",
+        backgroundSize: "contain",
         backgroundPosition: "center",
     };
 
@@ -64,7 +64,7 @@ const Banner = () => {
                     </motion.div>
 
 
-                    <p className="text-lg md:text-xl w-3/4 md:w-full m-auto text-[#5c81a3]">
+                    <p className="text-lg md:text-[22px] w-3/4 md:w-full m-auto text-[#6498c9]">
                         Building sleek, user-friendly interfaces for a better web experience.
                     </p>
 

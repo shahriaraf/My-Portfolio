@@ -27,7 +27,6 @@ const skills = [
   { name: 'Framer Motion', logo: framer, bg:'#0055FF' },
   { name: 'Express.js', logo: express, bg:'#FFFFFF' },
   { name: 'MySQL', logo: mysql, bg:'#4479A1' },
-  { name: 'HTML', logo: html, bg:'#E34F26' },
   { name: 'MongoDB', logo: mongodb, bg:'#47A248' },
   { name: 'Node.js', logo: node, bg:'#5FA04E' },
   { name: 'GitHub', logo: github, bg:'#FFFFFF' },
@@ -39,8 +38,8 @@ const skills = [
 ];
 
 const backgroundImageu = {
-  backgroundImage: "url('https://i.ibb.co.com/Hf6xBZCq/Lovepik-com-605760272-Black-technology-sense-grid-dotted-line.jpg')",
-  backgroundSize: "cover",
+  backgroundImage: "url('https://i.ibb.co.com/ynf2kph9/starsky1.jpg')",
+  backgroundSize: "contain",
   backgroundPosition: "center",
 };
 

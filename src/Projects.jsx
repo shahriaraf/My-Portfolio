@@ -28,8 +28,8 @@ const Projects = () => {
     }
   ];
   const backgroundImageu = {
-    backgroundImage: "url('https://i.ibb.co.com/Hf6xBZCq/Lovepik-com-605760272-Black-technology-sense-grid-dotted-line.jpg')",
-    backgroundSize: "cover",
+    backgroundImage: "url('https://i.ibb.co.com/ynf2kph9/starsky1.jpg')",
+    backgroundSize: "contain",
     backgroundPosition: "center",
   };
 
@@ -58,13 +58,13 @@ const Projects = () => {
           {/* Project Info */}
           <div className="text-center mt-4">
             <h3 className="text-xl text-[#85C5FF] font-semibold">{project.name}</h3>
-            <p className="text-sm text-[#5c81a3] mt-2 mb-4">{project.description}</p>
+            <p className="text-sm text-[#6498c9] mt-2 mb-4">{project.description}</p>
           </div>
 
           {/* Links at the Bottom */}
           <div className="flex border-[#85C5FF] border-t items-center justify-around ">
           <div className="mt-4 flex justify-center items-center gap-2 pt-3 pb-6">
-            <CgWebsite className="text-xl"></CgWebsite>
+            <CgWebsite className="text-green-600"></CgWebsite>
             <a
               href={project.liveLink}
               target="_blank"
@@ -82,7 +82,7 @@ const Projects = () => {
             >
               GitHub
             </a>
-            <FaGithub className="text-xl text-gray-400" />
+            <FaGithub className="text-gray-400" />
 
           </div>
           </div>

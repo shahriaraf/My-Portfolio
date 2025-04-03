@@ -3,12 +3,12 @@ import myPhoto from './assets/1738690845720.jpg';
 
 const AboutMe = () => {
   const backgroundImageu = {
-    backgroundImage: "url('https://i.ibb.co.com/Hf6xBZCq/Lovepik-com-605760272-Black-technology-sense-grid-dotted-line.jpg')",
-    backgroundSize: "cover",
+    backgroundImage: "url('https://i.ibb.co.com/ynf2kph9/starsky1.jpg')",
+    backgroundSize: "contain",
     backgroundPosition: "center",
-};
+  };
   return (
-    <div className="text-[#5c81a3] py-16 pt-24" style={backgroundImageu}>
+    <div className="text-[#6498c9] pt-32 pb-32" style={backgroundImageu}>
       <h2 className="text-4xl text-[#85C5FF] text-center mb-8">
         About
       </h2>

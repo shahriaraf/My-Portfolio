@@ -112,7 +112,7 @@ const Navbar = ({ onSetActive }) => {
                         smooth={true}
                         duration={500}
                         onSetActive={() => onSetActive("banner")}
-                        className="cursor-pointer font-semibold text-sm uppercase tracking-wide p-2 text-[#5c81a3]"
+                        className="cursor-pointer font-semibold text-sm uppercase tracking-wide p-2 text-[#6498c9]"
                     >
                         Home
                     </Link>
@@ -121,7 +121,7 @@ const Navbar = ({ onSetActive }) => {
                         smooth={true}
                         duration={500}
                         onSetActive={() => onSetActive("about")}
-                        className="cursor-pointer font-semibold text-sm uppercase tracking-wide p-2 text-[#5c81a3]"
+                        className="cursor-pointer font-semibold text-sm uppercase tracking-wide p-2 text-[#6498c9]"
                     >
                         About
                     </Link>
@@ -130,7 +130,7 @@ const Navbar = ({ onSetActive }) => {
                         smooth={true}
                         duration={500}
                         onSetActive={() => onSetActive("skills")}
-                        className="cursor-pointer font-semibold text-sm uppercase tracking-wide p-2 text-[#5c81a3]"
+                        className="cursor-pointer font-semibold text-sm uppercase tracking-wide p-2 text-[#6498c9]"
                     >
                         Skills
                     </Link>
@@ -139,7 +139,7 @@ const Navbar = ({ onSetActive }) => {
                         smooth={true}
                         duration={500}
                         onSetActive={() => onSetActive("projects")}
-                        className="cursor-pointer font-semibold text-sm uppercase tracking-wide p-2 text-[#5c81a3]"
+                        className="cursor-pointer font-semibold text-sm uppercase tracking-wide p-2 text-[#6498c9]"
                     >
                         Projects
                     </Link>
@@ -148,7 +148,7 @@ const Navbar = ({ onSetActive }) => {
                         smooth={true}
                         duration={500}
                         onSetActive={() => onSetActive("contact")}
-                        className="cursor-pointer font-semibold text-sm uppercase tracking-wide p-2 text-[#5c81a3]"
+                        className="cursor-pointer font-semibold text-sm uppercase tracking-wide p-2 text-[#6498c9]"
                     >
                         Contact
                     </Link>
