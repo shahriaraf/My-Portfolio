@@ -17,7 +17,6 @@ import github from '../public/asset/github.svg'
 import framer from '../public/asset/framer.svg'
 import Lottie from 'react-lottie';
 import animation from '../public/asset/Animation - 1743324470182.json'
-import { div } from 'framer-motion/client';
 
 const skills = [
   { name: 'HTML', logo: html, bg:'#E34F26' },
@@ -39,7 +38,7 @@ const skills = [
 
 const backgroundImageu = {
   backgroundImage: "url('https://i.ibb.co.com/ynf2kph9/starsky1.jpg')",
-  backgroundSize: "contain",
+  backgroundSize: "cover",
   backgroundPosition: "center",
 };
 
@@ -71,7 +70,7 @@ const Skills = () => {
       <p className='text-center text-4xl text-[#85C5FF]'>Skills</p>
       <div className="flex items-center justify-center h-screen text-white relative">
         <div className="absolute w-60 h-60 flex items-center justify-center rounded-full text-center text-xl font-bold shadow-lg z-10">
-          <div className='w-40 h-40 md:w-full md:h-full'>
+          <div className='w-36 h-36 md:w-full md:h-full'>
           <Lottie options={options} />
           </div>
          

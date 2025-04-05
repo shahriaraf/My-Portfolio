@@ -79,7 +79,7 @@ const Navbar = ({ onSetActive }) => {
                 <div className="hidden sm:block">
                     <div className="hidden sm:block">
                         <button
-                            className="border-[1px] flex items-center gap-2 px-4 py-2 
+                            className="border-[1px] flex bg-transparent items-center gap-2 px-4 py-2 
                  border-[#5c81a3] text-[#85C5FF] hover:text-black
                  focus:text-black active:text-black"
                             onTouchStart={(e) => e.currentTarget.classList.add("text-black")}

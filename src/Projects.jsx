@@ -29,7 +29,7 @@ const Projects = () => {
   ];
   const backgroundImageu = {
     backgroundImage: "url('https://i.ibb.co.com/ynf2kph9/starsky1.jpg')",
-    backgroundSize: "contain",
+    backgroundSize: "cover",
     backgroundPosition: "center",
   };
 

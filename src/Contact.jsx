@@ -13,14 +13,14 @@ const Contact = () => {
     emailjs
       .sendForm("service_a609f54", "template_nbhb31q", formRef.current, "DXMrIyiC32rc37Gkd")
       .then(() => {
-        setStatus("Message Sent Successfully! ✅");
+        setStatus("Sent");
         e.target.reset();
       })
       .catch(() => setStatus("Failed to send message ❌"));
   };
   const backgroundImageu = {
     backgroundImage: "url('https://i.ibb.co.com/ynf2kph9/starsky1.jpg')",
-    backgroundSize: "contain",
+    backgroundSize: "cover",
     backgroundPosition: "center",
   };
 
@@ -92,9 +92,11 @@ const Contact = () => {
 
               <button
                 type="submit"
-                className="w-full border border-[#85C5FF] text-lg font-medium py-3 hover:text-black"
+                className="w-full border border-[#85C5FF] text-lg font-medium py-3 hover:text-black  focus:text-black active:text-black"
+                onTouchStart={(e) => e.currentTarget.classList.add("text-black")}
+                onTouchEnd={(e) => e.currentTarget.classList.remove("text-black")}
               >
-                Send Message
+                Send Message <i className="fa-solid ml-1.5 text-lg fa-paper-plane"></i>
               </button>
             </form>
 

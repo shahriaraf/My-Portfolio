@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';  // Import Framer Motion
-import myPhoto from './assets/1738929235905-removebg-preview.png';
+import myPhoto from '../public/asset/IMG_20250405_234952.jpg';
 import './App.css';
 
 const Banner = () => {
@@ -33,7 +33,7 @@ const Banner = () => {
     }, [charIndex, currentRoleIndex, roles]);
     const backgroundImageu = {
         backgroundImage: "url('https://i.ibb.co.com/ynf2kph9/starsky1.jpg')",
-        backgroundSize: "contain",
+        backgroundSize: "cover",
         backgroundPosition: "center",
     };
 
