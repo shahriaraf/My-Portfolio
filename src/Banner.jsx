@@ -93,16 +93,21 @@ const Banner = () => {
                 </div>
                 <div className="md:hidden inline-block">
                     <div className="md:hidden inline-block">
-                        <button
-                            className="border-[1px] flex items-center gap-2 px-4 py-2 
-                 border-[#5c81a3] text-[#85C5FF] hover:text-black
-                 focus:text-black active:text-black"
-                            onTouchStart={(e) => e.currentTarget.classList.add("text-black")}
-                            onTouchEnd={(e) => e.currentTarget.classList.remove("text-black")}
+                        <a
+                            href="/public/shoumo-shahriar-araf.pdf.pdf" // <-- replace with the correct path to your resume file
+                            download
                         >
-                            Resume
-                            <span><i className="fa-solid fa-arrow-down"></i></span>
-                        </button>
+                            <button
+                                className="border-[1px] flex bg-transparent items-center gap-2 px-4 py-2 
+                border-[#5c81a3] text-[#85C5FF] hover:text-black
+                focus:text-black active:text-black"
+                                onTouchStart={(e) => e.currentTarget.classList.add("text-black")}
+                                onTouchEnd={(e) => e.currentTarget.classList.remove("text-black")}
+                            >
+                                Resume
+                                <span><i className="fa-solid fa-arrow-down"></i></span>
+                            </button>
+                        </a>
                     </div>
                 </div>
             </div>
