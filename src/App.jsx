@@ -33,7 +33,7 @@ function App() {
       <Navbar onSetActive={handleSetActive} />
 
       <div id="profile"><Profile /></div>
-      <div id="banner"><Banner /></div>
+      <div id="home"><Banner /></div>
       <div id="about"><AboutMe /></div>
       <div id="skills"><Skills /></div>
       <div id="projects"><Projects /></div>
