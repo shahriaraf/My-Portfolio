@@ -1,6 +1,6 @@
 import React, { useLayoutEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
-import myPhoto from './assets/IMG_20250418_010520.jpg';
+import myPhoto from './assets/IMG_20250418_215624.jpg';
 import './App.css';
 import gsap from 'gsap';
 
