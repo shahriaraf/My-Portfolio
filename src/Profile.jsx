@@ -30,7 +30,7 @@ const Profile = () => {
   return (
     <div
       ref={bannerRef}
-      className="w-full max-w-sm md:max-w-[350px] mx-auto mt-10 mb-16 md:mt-20 md:mb-44 bg-black text-gray-400 border-2 border-[#1e3640] rounded-[30px] overflow-hidden z-10 md:fixed md:ml-5"
+      className="w-full max-w-sm md:max-w-[350px] mx-auto mt-10 mb-16 md:mt-20 md:mb-44 bg-gradient-to-r from-black via-[#06202B] to-[#1e3640] text-gray-400 border-2 border-[#1e3640] rounded-[30px] overflow-hidden z-10 md:fixed md:ml-5"
     >
       {/* Profile Image */}
       <div className="flex justify-center items-center pt-8 sm:pt-10">

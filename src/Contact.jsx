@@ -21,13 +21,13 @@ const Contact = () => {
 
   return (
     <motion.section
-      className="bg-gradient-to-r from-black via-[#06202B] to-[#1e3640] mx-5 md:mx-30 rounded-4xl border border-[#1e3640] mt-20"
+      className="bg-gradient-to-r from-black via-[#06202B] to-[#1e3640] mx-5 md:mx-25 rounded-4xl border border-[#1e3640] mt-20"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1, ease: "easeInOut" }}
     >
       <div className="pl-5 md:pl-[350px] pt-5 text-white flex justify-start items-center">
-        <p className="uppercase text-xl px-2 rounded-full bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent font-semibold flex items-center gap-2">
+        <p className="uppercase oxanium text-xl px-2 rounded-full bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent font-semibold flex items-center gap-2">
           <i className="fas fa-envelope bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent"></i>{" "}
           Contact
         </p>
@@ -44,7 +44,7 @@ const Contact = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
           {/* Left: Contact Info */}
           <motion.div
-            className="space-y-4 bg-[#101026] rounded-2xl shadow-md p-5"
+            className="space-y-4 p-5"
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 1 }}
@@ -53,7 +53,7 @@ const Contact = () => {
               <i className="fa-solid fa-envelope text-xl bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent"></i>
               <a
                 href="mailto:shahriaraf01@gmail.com"
-                className="text-sm bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent hover:text-[#7AE2CF] transition"
+                className="text-lg bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent hover:text-[#7AE2CF] transition"
               >
                 shahriaraf01@gmail.com
               </a>
@@ -63,19 +63,19 @@ const Contact = () => {
               <i className="fa-solid fa-phone text-xl bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent"></i>
               <a
                 href="tel:+8801726649175"
-                className="text-sm bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent hover:text-[#7AE2CF] transition"
+                className="text-lg bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent hover:text-[#7AE2CF] transition"
               >
                 +880 1726 649175
               </a>
             </div>
 
             <div className="flex items-center gap-4">
-              <i className="fa-brands fa-whatsapp text-xl bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent"></i>
+              <i className="fa-brands fa-whatsapp text-2xl bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent"></i>
               <a
                 href="https://wa.me/8801726649175"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent hover:text-[#7AE2CF] transition"
+                className="text-lg bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent hover:text-[#7AE2CF] transition"
               >
                 WhatsApp: +880 1726 649175
               </a>

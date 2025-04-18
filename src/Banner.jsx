@@ -128,12 +128,12 @@ const Banner = () => {
     }, []);
 
     return (
-        <div className='bg-gradient-to-r from-black via-[#06202B] to-[#1e3640] mt-10 rounded-4xl border border-[#1e3640] md:mx-30'>
+        <div className='bg-gradient-to-r from-black via-[#06202B] to-[#1e3640] mt-10 rounded-4xl border border-[#1e3640] md:mx-25'>
             <div className='pl-8 md:pl-[350px] pt-5 text-white flex justify-between items-center'>
-                <p className='uppercase text-xl px-2 rounded-full bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent font-semibold flex items-center gap-2'>
+                <p className='uppercase oxanium text-xl px-2 rounded-full bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent font-semibold flex items-center gap-2'>
                     <i className="fas fa-handshake bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent"></i> Introduce
                 </p>
-                <div ref={logoRef} id="araf" className="text-3xl text-end text-[#7AE2CF] tiny5-regular mr-8">
+                <div ref={logoRef} id="araf" className="text-2xl md:text-3xl text-end text-[#7AE2CF] tiny5-regular mr-8">
                     <span className="logo-char inline-block A">A</span>
                     <span className="logo-char inline-block R">R</span>
                     <span className="logo-char inline-block B">A</span>
@@ -150,7 +150,7 @@ const Banner = () => {
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1 }}
                 >
-                    <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent">
+                    <h1 className="text-4xl oxanium md:text-6xl font-bold mb-6 bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent">
                         <span id='intro-text1' className='inline-block'>Hello!</span><br /><span id='intro-text2' className='inline-block'>I'm Shoumo Shahriar Araf</span>
                     </h1>
 
@@ -173,7 +173,7 @@ const Banner = () => {
                 {/* Spinner */}
                 <div ref={banRef} className='flex justify-end pr-8 md:pr-30 pt-16 pb-10'>
                     <div className='relative'>
-                        <a href="">
+                        <a href="#projects">
                             <img id='spinner' src="https://wpriverthemes.com/drake/wp-content/uploads/2023/03/round-text.png" alt="" />
                             <i className="fa-solid absolute top-15 right-14 fa-arrow-down text-gray-200 text-4xl"></i>
                         </a>

@@ -36,10 +36,10 @@ const AboutMe = () => {
   return (
     <div
       ref={aboutRef}
-      className='bg-gradient-to-r from-black via-[#06202B] to-[#1e3640] mx-5 lg:mx-20 xl:mx-30 rounded-4xl border border-[#1e3640] mt-20 py-10'
+      className='bg-gradient-to-r from-black via-[#06202B] to-[#1e3640] mx-5 lg:mx-20 xl:mx-25 rounded-4xl border border-[#1e3640] mt-20 py-10'
     >
       <div className="fade-section text-white flex items-center justify-center sm:justify-start sm:pl-10 lg:pl-[200px] xl:pl-[350px]">
-        <p className="uppercase text-base sm:text-lg lg:text-xl px-4 py-1 rounded-full bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent font-semibold flex items-center gap-2">
+        <p className="uppercase oxanium text-base sm:text-lg lg:text-xl px-4 py-1 rounded-full bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent font-semibold flex items-center gap-2">
           <i className="fas fa-info-circle bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent"></i> About
         </p>
       </div>

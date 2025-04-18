@@ -56,14 +56,14 @@ const Projects = () => {
 
   return (
     <motion.div
-      className="bg-gradient-to-r from-black via-[#06202B] to-[#1e3640] mx-4 md:mx-20 rounded-4xl border border-[#1e3640] mt-20 py-20"
+      className="bg-gradient-to-r from-black via-[#06202B] to-[#1e3640] mx-4 md:mx-25 rounded-4xl border border-[#1e3640] mt-20 py-20"
       variants={containerVariants}
       initial="hidden"
       whileInView="show"
       viewport={{ once: true }}
     >
       <div className="pl-6 md:pl-[350px] pt-5 text-white flex justify-start items-center">
-        <p className="uppercase text-xl px-2 rounded-full bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent font-semibold flex items-center gap-2">
+        <p className="uppercase oxanium text-xl px-2 rounded-full bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent font-semibold flex items-center gap-2">
           <i className="fas fa-project-diagram bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent"></i>
           Projects
         </p>
@@ -74,13 +74,6 @@ const Projects = () => {
 
       {/* Mobile Slider View */}
       <div className="md:hidden relative px-4">
-        <button
-          onClick={() => scroll("left")}
-          className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-[#06202B] text-white p-2 rounded-full shadow-lg"
-        >
-          <IoIosArrowBack size={24} />
-        </button>
-
         <div
           ref={scrollRef}
           className="flex gap-4 overflow-x-auto pb-4 scrollbar-hide"
@@ -126,13 +119,23 @@ const Projects = () => {
             </motion.div>
           ))}
         </div>
+        <div className="flex justify-between">
+        <button
+          onClick={() => scroll("left")}
+          className="absolute left-0 top-10 transform -translate-y-1/2 z-10 text-white p-2 rounded-full shadow-lg"
+        >
+          <IoIosArrowBack size={24} />
+        </button>
 
         <button
           onClick={() => scroll("right")}
-          className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-[#06202B] text-white p-2 rounded-full shadow-lg"
+          className="absolute right-0 top-10 transform -translate-y-1/2 z-10 text-white p-2 rounded-full shadow-lg"
         >
           <IoIosArrowForward size={24} />
         </button>
+        </div>
+
+       
       </div>
 
       {/* Desktop Grid View */}
