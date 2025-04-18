@@ -14,7 +14,8 @@ import mysql from '../public/asset/mysql.svg';
 import firebase from '../public/asset/firebase.svg';
 import github from '../public/asset/github.svg';
 import framer from '../public/asset/framer.svg';
-import gsap from 'gsap'
+import gsap from 'gsap';
+
 const frontendSkills = [
   { name: 'HTML', logo: html, bg: '#7AE2CF' },
   { name: 'CSS', logo: css, bg: '#7AE2CF' },
@@ -39,104 +40,104 @@ const toolSkills = [
   { name: 'GitHub', logo: github, bg: '#7AE2CF' },
 ];
 
-
 const Skills = () => {
+  useEffect(() => {
+    gsap.fromTo(
+      '.skill-icon',
+      { y: 0, scale: 1 },
+      {
+        scale: 1.8,
+        duration: 2,
+        repeat: -1,
+        yoyo: true,
+        ease: 'power1.inOut',
+        stagger: 0.1,
+      }
+    );
+  }, []);
 
-  
-useEffect(() => {
-  // Animating Frontend, Backend, and Tools icons
-  gsap.fromTo(
-    '.skill-icon',
-    { y: 0, scale: 1 },
-    {
-      scale: 1.8, // Increase size
-      duration: 2,
-      repeat: -1, // Repeat infinitely
-      yoyo: true, // Alternate back and forth
-      ease: 'power1.inOut', // Smooth ease for animation
-      stagger: 0.1, // Add a slight delay between each icon animation
-    }
-  );
-}, []);
   return (
-    <section className='bg-gradient-to-r from-black via-[#06202B] to-[#1e3640] mx-30 rounded-4xl border border-[#1e3640] mt-20 py-10'>
-      <div className='pl-[350px] pt-5 text-white flex justify-start items-center'>
-        <p className='uppercase text-xl px-2 rounded-full bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent font-semibold flex items-center gap-2'>
-          <i className="fas fa-briefcase bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent"></i> Skills
-        </p>
-
-      </div><hr className="border-t border-[#077A7D] my-4 w-1/5 ml-80" /><br /><br />
-
-      <div className="pl-[320px] mx-3 grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
-        {/* Frontend */}
-        <div className="bg-black rounded-4xl border border-[#1e3640] p-6 flex flex-col items-center">
-          <h3 className="text-2xl font-semibold mb-4 bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent">
-          <i className="fas fa-laptop-code bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent mr-2"></i>
-          Frontend
-          </h3><br />
-          <div className="flex flex-wrap justify-center gap-4">
-            {frontendSkills.map((skill) => (
-              <div
-                key={skill.name}
-                className="w-16 h-16 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transform transition"
-                style={{ backgroundColor: skill.bg }}
-                title={skill.name}
-              >
-                <img
-                  src={skill.logo}
-                  alt={skill.name}
-                  className="w-8 h-8 skill-icon"
-                />
-              </div>
-            ))}
-          </div>
+    <section className="bg-gradient-to-r from-black via-[#06202B] to-[#1e3640] mx-5 md:mx-10 md:pl-[320px] lg:mx-30 rounded-4xl border border-[#1e3640] mt-20 py-10">
+      <div className="container mx-auto px-4">
+        <div className="text-white flex items-center justify-start ">
+          <p className="uppercase text-xl px-2 rounded-full bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent font-semibold flex items-center gap-2">
+            <i className="fas fa-briefcase bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent"></i> Skills
+          </p>
         </div>
 
-        {/* Backend */}
-        <div className="bg-black rounded-4xl border border-[#1e3640] p-6 flex flex-col items-center">
-          <h3 className="text-2xl font-semibold mb-4 bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent">
-          <i className="fas fa-cogs bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent mr-2"></i>
+        <hr className="border-t border-[#077A7D] my-4 w-1/2 sm:w-1/3 md:w-1/4" />
 
-          Backend
-          </h3><br />
-          <div className="flex flex-wrap justify-center gap-4">
-            {backendSkills.map((skill) => (
-              <div
-                key={skill.name}
-                className="w-16 h-16 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transform transition"
-                style={{ backgroundColor: skill.bg }}
-                title={skill.name}
-              >
-                <img
-                  src={skill.logo}
-                  alt={skill.name}
-                  className="w-8 h-8 skill-icon"
-                />
-              </div>
-            ))}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 pt-10">
+          {/* Frontend */}
+          <div className="bg-black rounded-4xl border border-[#1e3640] p-6 flex flex-col items-center">
+            <h3 className="text-2xl font-semibold mb-4 bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent">
+              <i className="fas fa-laptop-code mr-2"></i>
+              Frontend
+            </h3>
+            <div className="flex flex-wrap justify-center gap-4">
+              {frontendSkills.map((skill) => (
+                <div
+                  key={skill.name}
+                  className="w-16 h-16 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transform transition"
+                  style={{ backgroundColor: skill.bg }}
+                  title={skill.name}
+                >
+                  <img
+                    src={skill.logo}
+                    alt={skill.name}
+                    className="w-8 h-8 skill-icon"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
 
-        {/* Tools */}
-        <div className="bg-black rounded-4xl border border-[#1e3640] p-6 flex flex-col items-center">
-          <h3 className="text-2xl font-semibold mb-4 bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent"><i className="fa-solid bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent mr-2 fa-screwdriver-wrench"></i>
-            Tools
-          </h3><br />
-          <div className="flex flex-wrap justify-center gap-4">
-            {toolSkills.map((skill) => (
-              <div
-                key={skill.name}
-                className="w-16 h-16 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transform transition"
-                style={{ backgroundColor: skill.bg }}
-                title={skill.name}
-              >
-                <img
-                  src={skill.logo}
-                  alt={skill.name}
-                  className="w-8 h-8 skill-icon"
-                />
-              </div>
-            ))}
+          {/* Backend */}
+          <div className="bg-black rounded-4xl border border-[#1e3640] p-6 flex flex-col items-center">
+            <h3 className="text-2xl font-semibold mb-4 bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent">
+              <i className="fas fa-cogs mr-2"></i>
+              Backend
+            </h3>
+            <div className="flex flex-wrap justify-center gap-4">
+              {backendSkills.map((skill) => (
+                <div
+                  key={skill.name}
+                  className="w-16 h-16 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transform transition"
+                  style={{ backgroundColor: skill.bg }}
+                  title={skill.name}
+                >
+                  <img
+                    src={skill.logo}
+                    alt={skill.name}
+                    className="w-8 h-8 skill-icon"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Tools */}
+          <div className="bg-black rounded-4xl border border-[#1e3640] p-6 flex flex-col items-center">
+            <h3 className="text-2xl font-semibold mb-4 bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent">
+              <i className="fa-solid fa-screwdriver-wrench mr-2"></i>
+              Tools
+            </h3>
+            <div className="flex flex-wrap justify-center gap-4">
+              {toolSkills.map((skill) => (
+                <div
+                  key={skill.name}
+                  className="w-16 h-16 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transform transition"
+                  style={{ backgroundColor: skill.bg }}
+                  title={skill.name}
+                >
+                  <img
+                    src={skill.logo}
+                    alt={skill.name}
+                    className="w-8 h-8 skill-icon"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
