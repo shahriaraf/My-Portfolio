@@ -1,14 +1,13 @@
 import React, { useState } from "react";
-import { Element } from "react-scroll";
-import { motion } from "framer-motion";
-import AboutMe from "./AboutMe";
 import "./App.css";
-import Banner from "./Banner";
-import Contact from "./Contact";
-import Footer from "./Footer";
 import Navbar from "./Navbar";
-import Projects from "./Projects";
+import Profile from "./Profile";
+import Footer from "./Footer";
+import Banner from "./Banner";
+import AboutMe from "./AboutMe";
 import Skills from "./Skills";
+import Projects from "./Projects";
+import Contact from "./Contact";
 
 
 
@@ -28,67 +27,21 @@ function App() {
   };
 
   return (
-    <div>
-     
-    
+    <div className="overflow-hidden">
+
+
       <Navbar onSetActive={handleSetActive} />
 
-      <Element name="banner">
-        <motion.div
-          key={activeSection === "banner" ? "banner-reset" : "banner"}
-          variants={sectionVariants}
-          initial="hidden"
-          animate="visible"
-        >
-          <Banner />
-        </motion.div>
-      </Element>
+      <div id="profile"><Profile /></div>
+      <div id="banner"><Banner /></div>
+      <div id="about"><AboutMe /></div>
+      <div id="skills"><Skills /></div>
+      <div id="projects"><Projects /></div>
+      <div id="contact"><Contact></Contact></div>
+      <Footer></Footer>
 
-      <Element name="about">
-        <motion.div
-          key={activeSection === "about" ? "about-reset" : "about"}
-          variants={sectionVariants}
-          initial="hidden"
-          animate="visible"
-        >
-          <AboutMe />
-        </motion.div>
-      </Element>
 
-      <Element name="skills">
-        <motion.div
-          key={activeSection === "skills" ? "skills-reset" : "skills"}
-          variants={sectionVariants}
-          initial="hidden"
-          animate="visible"
-        >
-          <Skills />
-        </motion.div>
-      </Element>
 
-      <Element name="projects">
-        <motion.div
-          key={activeSection === "projects" ? "projects-reset" : "projects"}
-          variants={sectionVariants}
-          initial="hidden"
-          animate="visible"
-        >
-          <Projects />
-        </motion.div>
-      </Element>
-
-      <Element name="contact">
-        <motion.div
-          key={activeSection === "contact" ? "contact-reset" : "contact"}
-          variants={sectionVariants}
-          initial="hidden"
-          animate="visible"
-        >
-          <Contact />
-        </motion.div>
-      </Element>
-
-      <Footer />
     </div>
   );
 }

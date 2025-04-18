@@ -48,7 +48,7 @@
   button{
     position: relative;
     z-index: 1;
-    background: #85C5FF;
+    background: #7AE2CF;
   }
   
   button::before {
@@ -108,6 +108,9 @@
       box-shadow: 0 0 40px var(--accent-glow);
     }
   }
+  
+
+  
   
 
 

@@ -1,12 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';  // Import Framer Motion
-import myPhoto from '../public/asset/IMG_20250405_234952.jpg';
-import './App.css';
+import gsap from 'gsap'
 
 const Banner = () => {
     const roles = ["Frontend Developer",
-        "MERN Stack Developer",
-        "Open Source Contributor", "Competitive Programmer"];
+        "MERN Stack Developer", "Web Designer",
+        "Open Source Contributor"];
     const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
     const [displayedText, setDisplayedText] = useState("");
     const [charIndex, setCharIndex] = useState(0);
@@ -31,16 +30,32 @@ const Banner = () => {
             return () => clearTimeout(hold);
         }
     }, [charIndex, currentRoleIndex, roles]);
-    const backgroundImageu = {
-        backgroundImage: "url('https://i.ibb.co.com/ynf2kph9/starsky1.jpg')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-    };
 
+
+
+    const banRef = useRef(null);
+    useLayoutEffect(() => {
+        let ctx = gsap.context(() => {
+            gsap.to("#spinner", {
+                rotate: 360,
+                duration: 8,
+                repeat: -1,
+                ease: "linear" // important to keep speed consistent
+            });
+        }, banRef);
+
+        return () => ctx.revert();
+    }, []);
 
     return (
-        <div className="flex items-center justify-center text-white pt-32 pb-32" style={backgroundImageu}>
-            <div className="flex flex-col sm:flex-row items-center gap-10 sm:gap-20 max-w-screen-xl mx-auto">
+        <div className='bg-gradient-to-r from-black via-[#06202B] to-[#1e3640] mx-30 rounded-4xl border border-[#1e3640] mt-10'>
+            <div className='pl-[350px] pt-5 text-white flex justify-start items-center'>
+                <p className='uppercase text-xl px-2 rounded-full bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent font-semibold flex items-center gap-2'>
+                    <i className="fas fa-handshake bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent"></i> Introduce
+                </p>
+            </div><hr className="border-t border-[#077A7D] my-4 w-1/5 ml-80" />
+
+            <div className="gap-10 sm:gap-20 pl-[320px] pt-10">
                 {/* Animated Designation Text */}
                 <motion.div
                     className="text-center sm:text-left"
@@ -48,49 +63,30 @@ const Banner = () => {
                     animate={{ opacity: 1 }}
                     transition={{ duration: 1 }}
                 >
-                    <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                        Hello! <br />I'm <span className='text-[#85C5FF]'>Shahriar Araf</span>
+                    <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent">
+                        <span id='intro-text1' className='inline-block'>Hello!</span><br /><span id='intro-text2' className='inline-block'>I'm Shoumo Shahriar Araf</span>
                     </h1>
 
                     {/* Animated Role Text with Fade-In & Fade-Out */}
+
+                    {/* Animated Role Text with Fade-In & Fade-Out */}
                     <motion.div
-                        className="inline-flex text-3xl md:text-5xl gap-2 sm:gap-3 rounded-xl sm:rounded-2xl mb-6 sm:mb-8 backdrop-blur-sm"
+                        className="inline-flex text-3xl md:text-5xl gap-2 sm:gap-3 rounded-xl sm:rounded-2xl mb-6 sm:mb-8 backdrop-blur-sm bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ duration: 1 }}
                     >
                         {displayedText}
-                        <span className="animate-pulse ml-1 text-[#85C5FF]">|</span> {/* Blinking cursor */}
+                        <span className="animate-pulse ml-1 bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent">|</span> {/* Blinking cursor */}
                     </motion.div>
 
 
-                    <p className="text-lg md:text-[22px] w-3/4 md:w-full m-auto text-[#6498c9]">
-                        Building sleek, user-friendly interfaces for a better web experience.
+                    <p className="text-lg md:text-[22px] w-3/4 md:w-[700px] text-[#777777]">
+                    Crafting clean code, with a designer’s soul. Turning ideas into interactive, elegant experiences.
                     </p>
-
-                    {/* Social Links */}
-                    <motion.div
-                        className="flex justify-center sm:justify-start gap-3 sm:gap-5 mt-8"
-                        initial={{ opacity: 0, y: 50 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 1, delay: 0.5 }}
-                    >
-                        <a href="https://github.com/shahriaraf" target="_blank" rel="noopener noreferrer" className="text-[#85C5FF] text-3xl sm:text-4xl p-4 rounded-full shadow-lg">
-                            <i className="fa-brands fa-github"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/in/shoumo-shahriar-araf" target="_blank" rel="noopener noreferrer" className="text-[#85C5FF] text-3xl sm:text-4xl p-4 rounded-full shadow-lg">
-                            <i className="fa-brands fa-linkedin"></i>
-                        </a>
-                        <a href="https://www.facebook.com/shahriar.araf.3" target="_blank" rel="noopener noreferrer" className="text-[#85C5FF] text-3xl sm:text-4xl p-4 rounded-full shadow-lg">
-                            <i className="fa-brands fa-facebook"></i>
-                        </a>
-                    </motion.div>
                 </motion.div>
 
-                {/* Profile Image */}
-                <div className="relative profile-img w-[300px] h-[300px] md:w-[400px] md:h-[400px] rounded-full bg-cover bg-center border-2 border-[#85C5FF] shadow-lg"
-                    style={{ backgroundImage: `url(${myPhoto})` }}>
-                </div>
+
                 <div className="md:hidden inline-block">
                     <div className="md:hidden inline-block">
                         <a
@@ -110,8 +106,14 @@ const Banner = () => {
                         </a>
                     </div>
                 </div>
+                <div ref={banRef} className='flex justify-end pr-30 pt-16 pb-10'>
+                    <div className='relative'>
+                        <a href=""><img id='spinner' src="https://wpriverthemes.com/drake/wp-content/uploads/2023/03/round-text.png" alt="" /><i className="fa-solid absolute top-15 right-14 fa-arrow-down text-gray-200 text-4xl"></i></a>
+                    </div>
+                </div>
             </div>
         </div>
+
     );
 };
 

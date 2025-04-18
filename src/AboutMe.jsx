@@ -1,57 +1,49 @@
-import React from 'react';
-import myPhoto from './assets/1738690845720.jpg';
+import { useRef, useLayoutEffect } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { div } from 'framer-motion/client';
+import { Link } from 'react-scroll';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const AboutMe = () => {
-  const backgroundImageu = {
-    backgroundImage: "url('https://i.ibb.co.com/ynf2kph9/starsky1.jpg')",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-  };
+  const aboutRef = useRef(null);
+
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.from('.fade-section', {
+        scrollTrigger: {
+          trigger: aboutRef.current,
+          start: 'top 80%',
+          toggleActions: 'restart none none none',
+        },
+        y: 50,
+        opacity: 0,
+        duration: 1,
+        ease: 'power3.out',
+        stagger: 0.3,
+      });
+    }, aboutRef);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <div className="text-[#6498c9] pt-32 pb-32" style={backgroundImageu}>
-      <h2 className="text-4xl text-[#85C5FF] text-center mb-8">
-        About
-      </h2>
-      <div className="max-w-screen-xl mx-auto px-6 pt-10 grid md:grid-cols-2 gap-10 items-center">
-
-        {/* Left Side - Image */}
-        <div className="hidden lg:flex justify-center ">
-          <img
-            src={myPhoto}
-            alt="Shahriar Araf"
-            className="w-96 h-96 object-cover rounded-lg border-2 border-[#85C5FF] shadow-lg"
-          />
-        </div>
-
-        {/* Right Side - Content */}
-        <div>
-
-
-          <p className="text-lg leading-relaxed mb-6">
-            Hi, I'm <span className="font-semibold text-[#85C5FF]">Shahriar Araf</span>, a passionate Web Developer dedicated to crafting engaging and dynamic digital experiences.
-          </p>
-
-          {/* What I Do */}
-          <h3 className="text-2xl text-[#85C5FF] font-semibold mb-4">What I Do:</h3>
-          <ul className="list-disc pl-6 space-y-3 text-lg">
-            <li>Specialized in <span className="font-semibold text-[#85C5FF]">JavaScript, React, and Tailwind CSS</span>.</li>
-            <li>Passionate about creating sleek, intuitive, and responsive user interfaces.</li>
-            <li>Constantly learning and exploring new web technologies.</li>
-          </ul>
-
-          {/* Interests & Hobbies */}
-          <h3 className="text-2xl text-[#85C5FF] font-semibold mt-6 mb-4">Beyond Coding:</h3>
-          <ul className="list-disc pl-6 space-y-3 text-lg">
-            <li>📸 Photography enthusiast, capturing moments through my lens.</li>
-            <li>🎮 Gamer who enjoys strategic games like Chess.</li>
-            <li>✈️ Love traveling, exploring new cultures, and experiencing diverse perspectives.</li>
-            <li>🎨 Passionate about painting and creative arts.</li>
-            <li>🏏 Sports lover—Cricket, Football, and Chess keep me active.</li>
-          </ul>
-        </div>
-
+    <div ref={aboutRef} className='bg-gradient-to-r from-black via-[#06202B] to-[#1e3640] mx-30 rounded-4xl border border-[#1e3640] mt-20 py-10'>
+      <div className="pl-[350px] text-white flex items-center">
+        <p className="uppercase text-xl px-2 rounded-full bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent font-semibold flex items-center gap-2">
+          <i className="fas fa-info-circle bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent"></i> About
+        </p>
       </div>
+      <hr className="border-t border-[#077A7D] my-4 w-1/5 ml-80" />
+
+
+      <p className='text-2xl text-[#777777] mt-6 pl-[320px] pt-10'>Every great design begin with
+        an even better story
+        Since beginning my journey as a freelance designer nearly 8 years ago, I've done remote work for agencies, consulted for startups, and collaborated with talented people to create digital products for both business and consumer use. I'm quietly confident, naturally curious, and perpetually working on improving my chopsone design problem at a time.</p>
+
     </div>
+
   );
 };
 

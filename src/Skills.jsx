@@ -1,100 +1,146 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import html from '../public/asset/html5.svg'
-import css from '../public/asset/css3.svg'
-import js from '../public/asset/javascript.svg'
-import react from '../public/asset/react.svg'
-import next from '../public/asset/nextdotjs.svg'
-import express from '../public/asset/express.svg'
-import redux from '../public/asset/redux.svg'
-import mongodb from '../public/asset/mongodb.svg'
-import node from '../public/asset/nodedotjs.svg'
-import mysql from '../public/asset/mysql.svg'
-import tailwind from '../public/asset/tailwindcss.svg'
-import bootstrap from '../public/asset/bootstrap.svg'
-import firebase from '../public/asset/firebase.svg'
-import github from '../public/asset/github.svg'
-import framer from '../public/asset/framer.svg'
-import Lottie from 'react-lottie';
-import animation from '../public/asset/Animation - 1743324470182.json'
-
-const skills = [
-  { name: 'HTML', logo: html, bg:'#E34F26' },
-  { name: 'CSS', logo: css, bg:'#1572B6' },
-  { name: 'JavaScript', logo: js, bg:'#F7DF1E' },
-  { name: 'React', logo: react, bg:'#61DAFB' },
-  { name: 'Framer Motion', logo: framer, bg:'#0055FF' },
-  { name: 'Express.js', logo: express, bg:'#FFFFFF' },
-  { name: 'MySQL', logo: mysql, bg:'#4479A1' },
-  { name: 'MongoDB', logo: mongodb, bg:'#47A248' },
-  { name: 'Node.js', logo: node, bg:'#5FA04E' },
-  { name: 'GitHub', logo: github, bg:'#FFFFFF' },
-  { name: 'Tailwind CSS', logo: tailwind, bg:'#06B6D4' },
-  { name: 'Bootstrap', logo: bootstrap, bg:'#7952B3'},
-  { name: 'Firebase', logo: firebase, bg:'#DD2C00' },
-  { name: 'Redux', logo: redux, bg:'#764ABC' },
-  { name: 'Next.js', logo: next, bg:'#FFFFFF' }
+import React, { useEffect } from 'react';
+import html from '../public/asset/html5.svg';
+import css from '../public/asset/css3.svg';
+import js from '../public/asset/javascript.svg';
+import reactLogo from '../public/asset/react.svg';
+import next from '../public/asset/nextdotjs.svg';
+import tailwind from '../public/asset/tailwindcss.svg';
+import bootstrap from '../public/asset/bootstrap.svg';
+import redux from '../public/asset/redux.svg';
+import express from '../public/asset/express.svg';
+import node from '../public/asset/nodedotjs.svg';
+import mongodb from '../public/asset/mongodb.svg';
+import mysql from '../public/asset/mysql.svg';
+import firebase from '../public/asset/firebase.svg';
+import github from '../public/asset/github.svg';
+import framer from '../public/asset/framer.svg';
+import gsap from 'gsap'
+const frontendSkills = [
+  { name: 'HTML', logo: html, bg: '#7AE2CF' },
+  { name: 'CSS', logo: css, bg: '#7AE2CF' },
+  { name: 'JavaScript', logo: js, bg: '#7AE2CF' },
+  { name: 'React', logo: reactLogo, bg: '#7AE2CF' },
+  { name: 'Next.js', logo: next, bg: '#7AE2CF' },
+  { name: 'Tailwind CSS', logo: tailwind, bg: '#7AE2CF' },
+  { name: 'Bootstrap', logo: bootstrap, bg: '#7AE2CF' },
 ];
 
-const backgroundImageu = {
-  backgroundImage: "url('https://i.ibb.co.com/ynf2kph9/starsky1.jpg')",
-  backgroundSize: "cover",
-  backgroundPosition: "center",
-};
+const backendSkills = [
+  { name: 'Node.js', logo: node, bg: '#7AE2CF' },
+  { name: 'Express.js', logo: express, bg: '#7AE2CF' },
+  { name: 'MongoDB', logo: mongodb, bg: '#7AE2CF' },
+  { name: 'MySQL', logo: mysql, bg: '#7AE2CF' },
+  { name: 'Firebase', logo: firebase, bg: '#7AE2CF' },
+];
 
-const options = {
-  animationData: animation,
-  loop: true,
-  autoplay: true, // Set to true if you want the animation to play automatically
-};
+const toolSkills = [
+  { name: 'Redux', logo: redux, bg: '#7AE2CF' },
+  { name: 'Framer Motion', logo: framer, bg: '#7AE2CF' },
+  { name: 'GitHub', logo: github, bg: '#7AE2CF' },
+];
+
 
 const Skills = () => {
-  const [radius, setRadius] = useState(280); // Default radius
 
-  useEffect(() => {
-    const updateRadius = () => {
-      if (window.innerWidth < 640) {
-        setRadius(140); // Mobile radius
-      } else {
-        setRadius(280); // Desktop radius
-      }
-    };
-
-    updateRadius(); // Initial check
-    window.addEventListener("resize", updateRadius);
-    return () => window.removeEventListener("resize", updateRadius);
-  }, []);
-
+  
+useEffect(() => {
+  // Animating Frontend, Backend, and Tools icons
+  gsap.fromTo(
+    '.skill-icon',
+    { y: 0, scale: 1 },
+    {
+      scale: 1.8, // Increase size
+      duration: 2,
+      repeat: -1, // Repeat infinitely
+      yoyo: true, // Alternate back and forth
+      ease: 'power1.inOut', // Smooth ease for animation
+      stagger: 0.1, // Add a slight delay between each icon animation
+    }
+  );
+}, []);
   return (
-    <div className='pt-20' style={backgroundImageu}>
-      <p className='text-center text-4xl text-[#85C5FF]'>Skills</p>
-      <div className="flex items-center justify-center h-screen text-white relative">
-        <div className="absolute w-60 h-60 flex items-center justify-center rounded-full text-center text-xl font-bold shadow-lg z-10">
-          <div className='w-36 h-36 md:w-full md:h-full'>
-          <Lottie options={options} />
-          </div>
-         
-        </div>
-        {/* Rotating Skills */}
-        <div className="relative w-[450px] h-[450px] flex items-center justify-center">
-          {skills.map((skill, index) => {
-            const angle = (index / skills.length) * 2 * Math.PI;
-            const x = radius * Math.cos(angle);
-            const y = radius * Math.sin(angle);
-            return (
-              <motion.div
+    <section className='bg-gradient-to-r from-black via-[#06202B] to-[#1e3640] mx-30 rounded-4xl border border-[#1e3640] mt-20 py-10'>
+      <div className='pl-[350px] pt-5 text-white flex justify-start items-center'>
+        <p className='uppercase text-xl px-2 rounded-full bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent font-semibold flex items-center gap-2'>
+          <i className="fas fa-briefcase bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent"></i> Skills
+        </p>
+
+      </div><hr className="border-t border-[#077A7D] my-4 w-1/5 ml-80" /><br /><br />
+
+      <div className="pl-[320px] mx-3 grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
+        {/* Frontend */}
+        <div className="bg-black rounded-4xl border border-[#1e3640] p-6 flex flex-col items-center">
+          <h3 className="text-2xl font-semibold mb-4 bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent">
+          <i className="fas fa-laptop-code bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent mr-2"></i>
+          Frontend
+          </h3><br />
+          <div className="flex flex-wrap justify-center gap-4">
+            {frontendSkills.map((skill) => (
+              <div
                 key={skill.name}
-                className="absolute"
-                style={{ transform: `translate(${x}px, ${y}px)` }}
-                transition={{ repeat: Infinity, duration: 10, ease: 'linear' }}
+                className="w-16 h-16 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transform transition"
+                style={{ backgroundColor: skill.bg }}
+                title={skill.name}
               >
-                <img src={skill.logo} alt={skill.name} className="w-8 h-8 md:w-11 md:h-11 rounded-xl" style={{ backgroundColor: skill.bg }} />
-              </motion.div>
-            );
-          })}
+                <img
+                  src={skill.logo}
+                  alt={skill.name}
+                  className="w-8 h-8 skill-icon"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Backend */}
+        <div className="bg-black rounded-4xl border border-[#1e3640] p-6 flex flex-col items-center">
+          <h3 className="text-2xl font-semibold mb-4 bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent">
+          <i className="fas fa-cogs bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent mr-2"></i>
+
+          Backend
+          </h3><br />
+          <div className="flex flex-wrap justify-center gap-4">
+            {backendSkills.map((skill) => (
+              <div
+                key={skill.name}
+                className="w-16 h-16 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transform transition"
+                style={{ backgroundColor: skill.bg }}
+                title={skill.name}
+              >
+                <img
+                  src={skill.logo}
+                  alt={skill.name}
+                  className="w-8 h-8 skill-icon"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Tools */}
+        <div className="bg-black rounded-4xl border border-[#1e3640] p-6 flex flex-col items-center">
+          <h3 className="text-2xl font-semibold mb-4 bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent"><i className="fa-solid bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent mr-2 fa-screwdriver-wrench"></i>
+            Tools
+          </h3><br />
+          <div className="flex flex-wrap justify-center gap-4">
+            {toolSkills.map((skill) => (
+              <div
+                key={skill.name}
+                className="w-16 h-16 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transform transition"
+                style={{ backgroundColor: skill.bg }}
+                title={skill.name}
+              >
+                <img
+                  src={skill.logo}
+                  alt={skill.name}
+                  className="w-8 h-8 skill-icon"
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
