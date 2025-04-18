@@ -128,7 +128,7 @@ const Banner = () => {
     }, []);
 
     return (
-        <div className='bg-gradient-to-r from-black via-[#06202B] to-[#1e3640] mt-10 rounded-4xl border border-[#1e3640] md:mx-25'>
+        <div className='bg-gradient-to-r from-black via-[#06202B] to-[#1e3640] mt-10 rounded-4xl border border-[#1e3640] md:mx-25 py-10'>
             <div className='pl-8 md:pl-[350px] pt-5 text-white flex justify-between items-center'>
                 <p className='uppercase oxanium text-xl px-2 rounded-full bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent font-semibold flex items-center gap-2'>
                     <i className="fas fa-handshake bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent"></i> Introduce

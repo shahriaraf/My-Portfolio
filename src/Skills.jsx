@@ -58,7 +58,7 @@ const Skills = () => {
 
   return (
     <section className="bg-gradient-to-r from-black via-[#06202B] to-[#1e3640] mx-5 md:mx-10 md:pl-[320px] lg:mx-25 rounded-4xl border border-[#1e3640] mt-20 py-10">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 py-10">
         <div className="text-white flex items-center justify-start ">
           <p className="uppercase oxanium text-xl px-2 rounded-full bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent font-semibold flex items-center gap-2">
             <i className="fas fa-briefcase bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent"></i> Skills
@@ -66,6 +66,9 @@ const Skills = () => {
         </div>
 
         <hr className="border-t border-[#077A7D] my-4 w-1/2 sm:w-1/3 md:w-1/4" />
+        <h2 className="text-3xl md:text-4xl font-bold text-center bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent mb-12">
+          My Advantages
+        </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 pt-10">
           {/* Frontend */}

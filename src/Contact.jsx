@@ -21,7 +21,7 @@ const Contact = () => {
 
   return (
     <motion.section
-      className="bg-gradient-to-r from-black via-[#06202B] to-[#1e3640] mx-5 md:mx-25 rounded-4xl border border-[#1e3640] mt-20"
+      className="bg-gradient-to-r from-black via-[#06202B] to-[#1e3640] mx-5 md:mx-25 rounded-4xl border border-[#1e3640] mt-20 py-10"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1, ease: "easeInOut" }}
