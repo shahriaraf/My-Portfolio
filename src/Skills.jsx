@@ -47,7 +47,7 @@ const Skills = () => {
       { y: 0, scale: 1 },
       {
         scale: 1.8,
-        duration: 2,
+        duration: 1,
         repeat: -1,
         yoyo: true,
         ease: 'power1.inOut',
@@ -73,7 +73,7 @@ const Skills = () => {
             <h3 className="text-2xl font-semibold mb-4 bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent">
               <i className="fas fa-laptop-code mr-2"></i>
               Frontend
-            </h3>
+            </h3><br />
             <div className="flex flex-wrap justify-center gap-4">
               {frontendSkills.map((skill) => (
                 <div
@@ -97,7 +97,7 @@ const Skills = () => {
             <h3 className="text-2xl font-semibold mb-4 bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent">
               <i className="fas fa-cogs mr-2"></i>
               Backend
-            </h3>
+            </h3><br />
             <div className="flex flex-wrap justify-center gap-4">
               {backendSkills.map((skill) => (
                 <div
@@ -121,7 +121,7 @@ const Skills = () => {
             <h3 className="text-2xl font-semibold mb-4 bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent">
               <i className="fa-solid fa-screwdriver-wrench mr-2"></i>
               Tools
-            </h3>
+            </h3><br />
             <div className="flex flex-wrap justify-center gap-4">
               {toolSkills.map((skill) => (
                 <div

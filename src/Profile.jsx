@@ -30,12 +30,12 @@ const Profile = () => {
   return (
     <div
       ref={bannerRef}
-      className="w-full max-w-sm md:max-w-[350px] mx-auto mt-10 mb-16 md:mt-20 md:mb-44 bg-gradient-to-r from-black via-[#06202B] to-[#1e3640] text-gray-400 border-2 border-[#1e3640] rounded-[30px] overflow-hidden z-10 md:fixed md:ml-5"
+      className="w-full max-w-sm md:max-w-[350px] mx-auto mt-15 mb-16 md:mt-20 md:mb-44 bg-gradient-to-r from-black via-[#06202B] to-[#1e3640] text-gray-400 border-2 border-[#1e3640] rounded-[30px] overflow-hidden z-10 md:fixed md:ml-5"
     >
       {/* Profile Image */}
       <div className="flex justify-center items-center pt-8 sm:pt-10">
         <img
-          className="w-40 sm:w-48 md:w-60 rounded-md scale-110"
+          className="w-48 sm:w-52 md:w-60 rounded-md scale-110"
           src={myPhoto}
           alt="Shoumo Shahriar Araf"
         />
@@ -43,7 +43,7 @@ const Profile = () => {
 
       {/* Info */}
       <div className="text-center mt-10 sm:mt-14 text-[#777777] font-bold px-4">
-        <p className="text-[#077A7D] hover:text-[#7AE2CF] hover:underline break-words">
+        <p className="bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent text-lg hover:text-[#7AE2CF] hover:underline break-words">
           shahriaraf01@gmail.com
         </p>
         <p>Sylhet, Bangladesh</p>
@@ -64,7 +64,7 @@ const Profile = () => {
           href="https://github.com/shahriaraf"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[#077A7D] hover:text-[#7AE2CF] text-2xl sm:text-3xl p-3 sm:p-4 rounded-full"
+          className="bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent hover:scale-125 transition hover:text-[#7AE2CF] text-2xl sm:text-3xl p-3 sm:p-4 rounded-full"
         >
           <i className="fa-brands fa-github"></i>
         </a>
@@ -72,7 +72,7 @@ const Profile = () => {
           href="https://www.linkedin.com/in/shoumo-shahriar-araf"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[#077A7D] hover:text-[#7AE2CF] text-2xl sm:text-3xl p-3 sm:p-4 rounded-full"
+          className="bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent hover:scale-125 transition hover:text-[#7AE2CF] text-2xl sm:text-3xl p-3 sm:p-4 rounded-full"
         >
           <i className="fa-brands fa-linkedin"></i>
         </a>
@@ -80,7 +80,7 @@ const Profile = () => {
           href="https://www.facebook.com/shahriar.araf.3"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[#077A7D] hover:text-[#7AE2CF] text-2xl sm:text-3xl p-3 sm:p-4 rounded-full"
+          className="bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent hover:scale-125 transition hover:text-[#7AE2CF] text-2xl sm:text-3xl p-3 sm:p-4 rounded-full"
         >
           <i className="fa-brands fa-facebook"></i>
         </a>

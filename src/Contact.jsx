@@ -53,7 +53,7 @@ const Contact = () => {
               <i className="fa-solid fa-envelope text-xl bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent"></i>
               <a
                 href="mailto:shahriaraf01@gmail.com"
-                className="text-lg bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent hover:text-[#7AE2CF] transition"
+                className="text-sm md:text-lg bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent hover:text-[#7AE2CF] transition"
               >
                 shahriaraf01@gmail.com
               </a>
@@ -63,7 +63,7 @@ const Contact = () => {
               <i className="fa-solid fa-phone text-xl bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent"></i>
               <a
                 href="tel:+8801726649175"
-                className="text-lg bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent hover:text-[#7AE2CF] transition"
+                className="text-sm md:text-lg bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent hover:text-[#7AE2CF] transition"
               >
                 +880 1726 649175
               </a>
@@ -75,7 +75,7 @@ const Contact = () => {
                 href="https://wa.me/8801726649175"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-lg bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent hover:text-[#7AE2CF] transition"
+                className="text-sm md:text-lg bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent hover:text-[#7AE2CF] transition"
               >
                 WhatsApp: +880 1726 649175
               </a>

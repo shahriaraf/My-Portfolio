@@ -43,7 +43,7 @@ const Navbar = ({ onSetActive }) => {
                 ref={navRef}
                 className="hidden md:flex fixed top-0 right-0 h-[600px] w-16 rounded-full bg-gradient-to-r from-black via-[#06202B] to-[#1e3640] border-2 border-[#1e3640] z-10 pl-3 mt-20 mr-5 pt-40 flex-col items-start gap-10"
             >
-                <ul className="flex flex-col justify-center items-center gap-8 text-[#077A7D] mr-20">
+                <ul className="flex flex-col justify-center items-center gap-8 text-[#7AE2CF] mr-20">
                     {menuItems.map((item) => (
                         <li key={item.id} id={item.id}>
                             <Link
@@ -51,7 +51,7 @@ const Navbar = ({ onSetActive }) => {
                                 smooth={true}
                                 duration={500}
                                 onSetActive={() => onSetActive(item.to)}
-                                className="cursor-pointer font-semibold text-sm uppercase tracking-wide p-2 hover:text-[#7AE2CF]"
+                                className="cursor-pointer font-semibold text-sm uppercase tracking-wide p-2 hover:text-[#077A7D]"
                             >
                                 <i className={`text-2xl ${item.icon}`}></i>
                             </Link>
@@ -69,7 +69,7 @@ const Navbar = ({ onSetActive }) => {
 
             {/* Mobile Menu Overlay */}
             {isMenuOpen && (
-                <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-95 flex flex-col items-center justify-center gap-8 text-[#077A7D] z-40">
+                <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-95 flex flex-col items-center justify-center gap-8 text-[#7AE2CF] z-40">
                     {menuItems.map((item) => (
                         <Link
                             key={item.id}

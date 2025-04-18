@@ -165,7 +165,7 @@ const Banner = () => {
                         <span className="animate-pulse ml-1 bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent">|</span> {/* Blinking cursor */}
                     </motion.div>
 
-                    <p className="text-lg md:text-[22px] w-3/4 m-auto md:m-0 md:w-[700px] text-[#777777]">
+                    <p className="text-lg md:text-[22px] w-9/10 m-auto md:m-0 md:w-[700px] text-[#777777]">
                         Crafting clean code, with a designer’s soul. Turning ideas into interactive, elegant experiences.
                     </p>
                 </motion.div>
@@ -175,7 +175,7 @@ const Banner = () => {
                     <div className='relative'>
                         <a href="#projects">
                             <img id='spinner' src="https://wpriverthemes.com/drake/wp-content/uploads/2023/03/round-text.png" alt="" />
-                            <i className="fa-solid absolute top-15 right-14 fa-arrow-down text-gray-200 text-4xl"></i>
+                            <i className="fa-solid absolute top-15 right-14 fa-arrow-down text-[#7AE2CF] text-4xl"></i>
                         </a>
                     </div>
                 </div>

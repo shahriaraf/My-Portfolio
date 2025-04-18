@@ -10,7 +10,7 @@ const Footer = () => {
       transition={{ duration: 1 }}
     >
       <div className="max-w-screen-lg mx-auto text-center">
-        <p className="text-lg mb-2">&copy; {new Date().getFullYear()} Shoumo Shahriar Araf. All rights reserved.</p>
+        <p className="text-lg mb-2 mx-3 bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent">&copy; {new Date().getFullYear()} Shoumo Shahriar Araf. All rights reserved.</p>
       </div>
     </motion.footer>
   );
