@@ -29,7 +29,7 @@ const Navbar = ({ onSetActive }) => {
     }, []);
 
     const menuItems = [
-        { id: "nav1", to: "banner", icon: "las la-home" },
+        { id: "nav1", to: "home", icon: "las la-home" },
         { id: "nav2", to: "about", icon: "lar la-user" },
         { id: "nav3", to: "skills", icon: "las la-shapes" },
         { id: "nav4", to: "projects", icon: "las la-grip-vertical" },
