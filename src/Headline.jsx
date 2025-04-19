@@ -23,7 +23,7 @@ const Headline = () => {
     }, []);
 
     return (
-        <div className="w-[350px] py-2 overflow-hidden z-50" ref={tickerContainerRef}>
+        <div className="w-[350px] m-auto py-2 overflow-hidden z-50" ref={tickerContainerRef}>
             <div
                 className="flex gap-10 text-[#7AE2CF] font-semibold md:text-lg text-sm whitespace-nowrap w-max"
                 ref={tickerContentRef}
