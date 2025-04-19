@@ -37,7 +37,7 @@ const Contact = () => {
       <br />
 
       <div className="pl-5 md:pl-[320px] pr-5">
-        <h2 className="text-3xl md:text-4xl font-bold text-center bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent mb-12">
+        <h2 className="text-2xl md:text-4xl font-bold text-center bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent mb-12">
           Let's Work Together
         </h2>
 

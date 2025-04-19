@@ -66,7 +66,7 @@ const Skills = () => {
         </div>
 
         <hr className="border-t border-[#077A7D] my-4 w-1/2 sm:w-1/3 md:w-1/4" />
-        <h2 className="text-xl md:text-4xl font-bold text-center bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent mb-12">
+        <h2 className="text-2xl md:text-4xl font-bold text-center bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent mb-12">
           My Advantages
         </h2>
 

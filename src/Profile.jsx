@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import myPhoto from './assets/IMG_20250418_215624.jpg';
 import './App.css';
 import gsap from 'gsap';
+import Headline from './Headline';
 
 const Profile = () => {
   const bannerRef = useRef(null);
@@ -42,20 +43,18 @@ const Profile = () => {
       </div>
 
       {/* Info */}
-      <div className="text-center mt-10 sm:mt-14 text-[#777777] font-bold px-4">
+      <div className="text-center mt-10 sm:mt-14 text-gray-400 font-bold px-4">
         <p className="bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent text-lg hover:text-[#7AE2CF] hover:underline break-words">
           shahriaraf01@gmail.com
         </p>
         <p>Sylhet, Bangladesh</p>
         <br />
-        <p className="text-xs sm:text-sm">
-          &copy; {new Date().getFullYear()} Shoumo Shahriar Araf. All rights reserved.
-        </p>
       </div>
+      <Headline></Headline>
 
       {/* Social Links */}
       <motion.div
-        className="flex justify-center gap-4 sm:gap-5 mt-6 sm:mt-8"
+        className="flex justify-center gap-4 sm:gap-5 md:mt-3 mt-8"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.5 }}
@@ -87,7 +86,7 @@ const Profile = () => {
       </motion.div>
 
       {/* Resume Button */}
-      <div className="flex justify-center mb-10 mt-6 sm:mt-8">
+      <div className="flex justify-center mb-10 md:mt-4 mt-8">
         <a
           href="/shoumo-shahriar-araf.pdf" // ✅ Adjust this path as needed
           download
