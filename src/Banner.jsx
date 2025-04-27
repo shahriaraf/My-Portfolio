@@ -1,6 +1,8 @@
 import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';  // Import Framer Motion
 import gsap from 'gsap'
+import AnimateName from './AnimateName';
+
 
 const Banner = () => {
     const roles = ["Frontend Developer", "MERN Stack Developer", "Web Designer", "Open Source Contributor"];
@@ -169,6 +171,8 @@ const Banner = () => {
                         Crafting clean code, with a designer’s soul. Turning ideas into interactive, elegant experiences.
                     </p>
                 </motion.div>
+
+                <AnimateName></AnimateName>
 
                 {/* Spinner */}
                 <div ref={banRef} className='flex justify-end pr-8 md:pr-30 pt-16 pb-10'>
