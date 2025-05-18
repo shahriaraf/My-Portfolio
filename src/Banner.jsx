@@ -167,10 +167,10 @@ const Banner = () => {
                         <span className="animate-pulse ml-1 bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent">|</span> {/* Blinking cursor */}
                     </motion.div>
                 </motion.div>
-                 <ShinyText text=" Crafting clean code, with a designer’s soul. Turning ideas into interactive, elegant experiences." disabled={false} speed={3} className='text-lg md:text-[22px] w-9/10 mx-auto md:mx-0 md:w-[700px] text-gray-400 inline' />
+                 <ShinyText text=" Crafting clean code, with a designer’s soul. Turning ideas into interactive, elegant experiences." disabled={false} speed={3} className='text-lg md:text-[22px] w-9/10 mx-auto md:mx-0 md:w-[700px] text-gray-400 text-center md:text-start' />
 
                 {/* Spinner */}
-                <div ref={banRef} className='flex justify-end pr-8 md:pr-30 pt-16 pb-10'>
+                <div ref={banRef} className='flex justify-end pr-8 md:pr-30 pt-10 pb-10'>
                     <div className='relative'>
                         <a href="#projects">
                             <img id='spinner' src="https://wpriverthemes.com/drake/wp-content/uploads/2023/03/round-text.png" alt="" />

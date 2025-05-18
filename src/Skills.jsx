@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import html from '../public/asset/html5.svg';
 import css from '../public/asset/css3.svg';
 import js from '../public/asset/javascript.svg';
