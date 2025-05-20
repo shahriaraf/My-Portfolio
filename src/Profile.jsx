@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import myPhoto from './assets/IMG_20250418_215624.jpg';
 import './App.css';
 import gsap from 'gsap';
-import Headline from './Headline';
+import RotatingText from './RotatingText'
 
 const Profile = () => {
   const bannerRef = useRef(null);
@@ -50,7 +50,23 @@ const Profile = () => {
         <p>Sylhet, Bangladesh</p>
         <br />
       </div>
-      <Headline></Headline>
+      <div className='flex justify-center items-center'>
+        <p className='text-lg mr-2'>Crative</p>
+        <RotatingText
+        texts={['Thinker', 'Coader', 'Designer']}
+        mainClassName="text-[#7AE2CF] md:pt-1 text-lg font-medium overflow-hidden justify-center rounded-lg"
+        staggerFrom={"last"}
+        initial={{ y: "100%" }}
+        animate={{ y: 0 }}
+        exit={{ y: "-120%" }}
+        staggerDuration={0.025}
+        splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
+        transition={{ type: "spring", damping: 30, stiffness: 400 }}
+        rotationInterval={2000}
+      />
+      </div>
+      
+
 
       {/* Social Links */}
       <motion.div
