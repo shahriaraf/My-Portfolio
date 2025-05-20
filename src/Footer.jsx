@@ -9,7 +9,7 @@ const Footer = () => {
   <div>
      <div className="bg-gradient-to-r from-black via-[#06202B] to-[#1e3640] text-[#7AE2CF] border border-[#1e3640] rounded-t-full mt-20 py-12 pt-24 text-center flex justify-center md:hidden">
         <FuzzyText
-          baseIntensity={0.08}
+          baseIntensity={0.06}
           fontSize='12px'
           className="w-1/2 mb-2 mx-5"
         >
