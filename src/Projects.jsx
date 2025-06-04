@@ -56,7 +56,7 @@ const Projects = () => {
 
   return (
     <motion.div
-      className="bg-gradient-to-r from-black via-[#06202B] to-[#1e3640] mx-4 md:mx-25 rounded-4xl border border-[#1e3640] mt-20 py-20"
+      className="bg-black mx-4 md:mx-25 mt-20 py-20"
       variants={containerVariants}
       initial="hidden"
       whileInView="show"

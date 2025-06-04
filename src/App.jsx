@@ -13,6 +13,8 @@ import Contact from "./Contact";
 
 
 
+
+
 function App() {
   const [activeSection, setActiveSection] = useState(""); // Track active section
 
@@ -39,6 +41,9 @@ function App() {
       <div id="projects"><Projects /></div>
       <div id="contact"><Contact></Contact></div>
       <Footer></Footer>
+      
+  
+
 
 
 

@@ -31,7 +31,7 @@ const Profile = () => {
   return (
     <div
       ref={bannerRef}
-      className="w-full max-w-sm md:max-w-[350px] mx-auto mt-15 mb-16 md:mt-20 md:mb-44 bg-gradient-to-r from-black via-[#06202B] to-[#1e3640] text-gray-400 border-2 border-[#1e3640] rounded-[30px] overflow-hidden z-10 md:fixed md:ml-5"
+      className="w-full max-w-sm md:max-w-[350px] mx-auto mt-15 mb-16 md:mt-20 md:mb-44 bg-black text-gray-400 border-2 border-[#1e3640] rounded-[30px] overflow-hidden z-10 md:fixed md:ml-5"
     >
       {/* Profile Image */}
       <div className="flex justify-center items-center pt-8 sm:pt-10">
@@ -109,7 +109,9 @@ const Profile = () => {
         >
           <button
             id="resumeBtn"
-            className="border bg-transparent text-base sm:text-lg font-semibold px-6 sm:px-12 py-2 border-[#7AE2CF] text-[#7AE2CF] hover:text-black hover:bg-[#7AE2CF] transition-colors duration-300"
+            style={{ boxShadow: '0 0 10px 0.5px #7AE2CF' }}
+            className="border rounded-full shadow-md shadow-amber-200
+             bg-transparent text-base sm:text-lg font-semibold px-6 sm:px-12 py-2 border-[#7AE2CF] text-[#7AE2CF] hover:text-black hover:bg-[#7AE2CF] transition-colors duration-300"
             onTouchStart={(e) => e.currentTarget.classList.add("text-black", "bg-[#7AE2CF]")}
             onTouchEnd={(e) => e.currentTarget.classList.remove("text-black", "bg-[#7AE2CF]")}
           >

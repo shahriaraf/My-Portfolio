@@ -36,7 +36,7 @@ const AboutMe = () => {
   return (
     <div
       ref={aboutRef}
-      className='bg-gradient-to-r from-black via-[#06202B] to-[#1e3640] mx-5 lg:mx-20 xl:mx-25 rounded-4xl border border-[#1e3640] mt-20 py-30'
+      className='bg-black mx-5 lg:mx-20 xl:mx-25 mt-20 py-30'
     >
       <div className="fade-section flex items-center justify-center sm:justify-start sm:pl-10 lg:pl-[200px] xl:pl-[350px]">
         <p className="uppercase oxanium text-xl px-4 py-1 rounded-full bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent font-semibold flex items-center gap-2">

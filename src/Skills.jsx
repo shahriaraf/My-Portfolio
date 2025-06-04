@@ -57,7 +57,7 @@ const Skills = () => {
   }, []);
 
   return (
-    <section className="bg-gradient-to-r from-black via-[#06202B] to-[#1e3640] mx-5 md:mx-10 md:pl-[320px] lg:mx-25 rounded-4xl border border-[#1e3640] mt-20 py-10">
+    <section className="bg-black mx-5 md:mx-10 md:pl-[320px] lg:mx-25 mt-20 py-10">
       <div className="container mx-auto px-4 py-10">
         <div className="text-white flex items-center justify-start ">
           <p className="uppercase oxanium text-xl px-2 rounded-full bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent font-semibold flex items-center gap-2">
@@ -70,9 +70,9 @@ const Skills = () => {
           My Advantages
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 pt-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-8 pt-10">
           {/* Frontend */}
-          <div className="bg-black rounded-4xl border border-[#1e3640] p-6 flex flex-col items-center">
+          <div className="bg-black rounded-4xl border border-[#1e3640] p-6 flex flex-col items-center" style={{ boxShadow: '0 0 15px 0.5px #7AE2CF' }}>
             <h3 className="text-2xl font-semibold mb-4 bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent">
               <i className="fas fa-laptop-code mr-2"></i>
               Frontend
@@ -96,7 +96,7 @@ const Skills = () => {
           </div>
 
           {/* Backend */}
-          <div className="bg-black rounded-4xl border border-[#1e3640] p-6 flex flex-col items-center">
+          <div className="bg-black rounded-4xl border border-[#1e3640] p-6 flex flex-col items-center" style={{ boxShadow: '0 0 15px 0.5px #7AE2CF' }}>
             <h3 className="text-2xl font-semibold mb-4 bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent">
               <i className="fas fa-cogs mr-2"></i>
               Backend
@@ -120,7 +120,7 @@ const Skills = () => {
           </div>
 
           {/* Tools */}
-          <div className="bg-black rounded-4xl border border-[#1e3640] p-6 flex flex-col items-center">
+          <div className="bg-black rounded-4xl border border-[#1e3640] p-6 flex flex-col items-center" style={{ boxShadow: '0 0 15px 0.5px #7AE2CF' }}>
             <h3 className="text-2xl font-semibold mb-4 bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent">
               <i className="fa-solid fa-screwdriver-wrench mr-2"></i>
               Tools
