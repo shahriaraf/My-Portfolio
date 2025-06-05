@@ -110,8 +110,8 @@ const Profile = () => {
           <button
             id="resumeBtn"
             style={{ boxShadow: '0 0 10px 0.5px #7AE2CF' }}
-            className="border rounded-full shadow-md shadow-amber-200
-             bg-transparent text-base sm:text-lg font-semibold px-6 sm:px-12 py-2 border-[#7AE2CF] text-[#7AE2CF] hover:text-black hover:bg-[#7AE2CF] transition-colors duration-300"
+            className="rounded-full shadow-md shadow-amber-200
+             bg-transparent text-base sm:text-lg font-semibold px-6 sm:px-12 py-2 text-[#7AE2CF] hover:text-black hover:bg-[#7AE2CF] transition-colors duration-300"
             onTouchStart={(e) => e.currentTarget.classList.add("text-black", "bg-[#7AE2CF]")}
             onTouchEnd={(e) => e.currentTarget.classList.remove("text-black", "bg-[#7AE2CF]")}
           >

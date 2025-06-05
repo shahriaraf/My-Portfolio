@@ -117,7 +117,7 @@ const Contact = () => {
               <button
                 type="submit"
                 style={{ boxShadow: '0 0 10px 0.5px #7AE2CF' }}
-                className="w-full border rounded-full font-semibold border-[#7AE2CF] text-lg py-3 hover:text-black hover:bg-[#7AE2CF] transition"
+                className="w-full rounded-full font-semibold text-lg py-3 hover:text-black hover:bg-[#7AE2CF] transition"
               >
                 Send Message <i className="fa-solid fa-paper-plane ml-2"></i>
               </button>

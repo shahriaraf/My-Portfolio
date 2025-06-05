@@ -8,6 +8,9 @@ import AboutMe from "./AboutMe";
 import Skills from "./Skills";
 import Projects from "./Projects";
 import Contact from "./Contact";
+import Particles from "./Particles";
+
+
 
 
 
@@ -29,8 +32,19 @@ function App() {
   };
 
   return (
-    <div className="overflow-hidden">
-
+    <div className="relative overflow-hidden">
+      <div className="fixed inset-0 -z-10">
+    <Particles 
+    particleColors={['#7AE2CF']}
+    particleCount={800}
+    particleSpread={10}
+    speed={0.8}
+    particleBaseSize={100}
+    moveParticlesOnHover={true}
+    alphaParticles={true}
+    disableRotation={false}
+    />
+  </div>
 
       <Navbar onSetActive={handleSetActive} />
 
