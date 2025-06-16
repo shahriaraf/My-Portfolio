@@ -34,7 +34,7 @@ const projects = [
 const Projects = () => {
   return (
     <div className="bg-black min-h-screen flex flex-col items-center justify-center md:pl-85 px-4">
-      <h2 className="text-4xl font-bold text-center text-[#7AE2CF] bg-clip-text mb-12">
+      <h2 className="text-2xl md:text-4xl font-bold text-center text-[#7AE2CF] bg-clip-text mb-12">
         What I Have Built
       </h2>
 
@@ -55,7 +55,7 @@ const Projects = () => {
               <h3 className="text-[#7AE2CF] text-2xl font-bold mb-2 text-center">
                 {project.name}
               </h3>
-              <p className="text-sm text-gray-300 mb-4 text-center">
+              <p className="md:text-sm text-[12px] text-gray-300 mb-4 text-center">
                 {project.description}
               </p>
               <div className="flex justify-between mt-auto">
