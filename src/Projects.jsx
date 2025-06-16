@@ -34,7 +34,7 @@ const projects = [
 const Projects = () => {
   return (
     <div className="bg-black min-h-screen flex flex-col items-center justify-center md:pl-85 px-4">
-      <h2 className="text-2xl md:text-4xl font-bold text-center text-[#7AE2CF] bg-clip-text mb-12">
+      <h2 className="bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent text-2xl md:text-4xl font-bold text-center mb-12">
         What I Have Built
       </h2>
 
