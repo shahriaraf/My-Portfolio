@@ -172,7 +172,7 @@ const Banner = () => {
                 {/* Spinner */}
                 <div ref={banRef} className='flex justify-center md:justify-end md:pr-30 pt-10 pb-10'>
                     <div className='relative'>
-                        <a href="#projects">
+                        <a href="#projects" aria-label='See Projects'>
                             <img id='spinner' src="https://wpriverthemes.com/drake/wp-content/uploads/2023/03/round-text.png" alt="" />
                             <i className="fa-solid absolute top-15 right-14 fa-arrow-down text-[#7AE2CF] text-4xl"></i>
                         </a>

@@ -38,6 +38,8 @@ const Profile = () => {
         <img
           className="w-48 sm:w-52 md:w-60 rounded-md scale-110"
           src={myPhoto}
+          width={240}
+          height={320}
           alt="Shoumo Shahriar Araf"
         />
       </div>
@@ -53,19 +55,19 @@ const Profile = () => {
       <div className='flex justify-center items-center'>
         <p className='text-lg mr-2'>Crative</p>
         <RotatingText
-        texts={['Thinker', 'Coader', 'Designer']}
-        mainClassName="text-[#7AE2CF] md:pt-1 text-lg font-medium overflow-hidden justify-center rounded-lg"
-        staggerFrom={"last"}
-        initial={{ y: "100%" }}
-        animate={{ y: 0 }}
-        exit={{ y: "-120%" }}
-        staggerDuration={0.025}
-        splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
-        transition={{ type: "spring", damping: 30, stiffness: 400 }}
-        rotationInterval={2000}
-      />
+          texts={['Thinker', 'Coader', 'Designer']}
+          mainClassName="text-[#7AE2CF] md:pt-1 text-lg font-medium overflow-hidden justify-center rounded-lg"
+          staggerFrom={"last"}
+          initial={{ y: "100%" }}
+          animate={{ y: 0 }}
+          exit={{ y: "-120%" }}
+          staggerDuration={0.025}
+          splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
+          transition={{ type: "spring", damping: 30, stiffness: 400 }}
+          rotationInterval={2000}
+        />
       </div>
-      
+
 
 
       {/* Social Links */}
@@ -79,6 +81,7 @@ const Profile = () => {
           href="https://github.com/shahriaraf"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label='Github account'
           className="bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent hover:scale-125 transition hover:text-[#7AE2CF] text-2xl sm:text-3xl p-3 sm:p-4 rounded-full"
         >
           <i className="fa-brands fa-github"></i>
@@ -87,6 +90,7 @@ const Profile = () => {
           href="https://www.linkedin.com/in/shoumo-shahriar-araf"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label='Linkedin account'
           className="bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent hover:scale-125 transition hover:text-[#7AE2CF] text-2xl sm:text-3xl p-3 sm:p-4 rounded-full"
         >
           <i className="fa-brands fa-linkedin"></i>
@@ -95,6 +99,7 @@ const Profile = () => {
           href="https://www.facebook.com/shahriar.araf.3"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label='Facebook account'
           className="bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent hover:scale-125 transition hover:text-[#7AE2CF] text-2xl sm:text-3xl p-3 sm:p-4 rounded-full"
         >
           <i className="fa-brands fa-facebook"></i>

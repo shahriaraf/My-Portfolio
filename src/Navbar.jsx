@@ -62,7 +62,7 @@ const Navbar = ({ onSetActive }) => {
 
             {/* Mobile Hamburger Button */}
             <div className="fixed top-5 left-5 md:hidden z-50">
-                <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-[#7AE2CF]">
+                <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-[#7AE2CF]" aria-label="Menu">
                     {isMenuOpen ? <X size={32} /> : <Menu size={32} />}
                 </button>
             </div>
