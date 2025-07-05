@@ -132,9 +132,20 @@ const Banner = () => {
     return (
         <div className='bg-black mt-10 md:mx-25 py-10'>
             <div className='pl-8 md:pl-[350px] pt-5 text-white flex justify-between items-center'>
-                <p className='uppercase oxanium text-xl px-2 rounded-full bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent font-semibold flex items-center gap-2'>
-                    <i className="fas fa-handshake bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent"></i> Introduce
-                </p>
+                 <motion.p 
+                    className='uppercase oxanium text-xl px-2 rounded-full bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent font-semibold flex items-center gap-2'
+                    initial={{ opacity: 0, x: -50 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8, delay: 0.2 }}
+                >
+                    <motion.i 
+                        className="fas fa-handshake bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent"
+                        animate={{ rotate: [0, 15, -15, 0] }}
+                        transition={{ duration: 2, repeat: Infinity, delay: 3 }}
+                    />
+                    Introduce
+                </motion.p>
+                
                 <div ref={logoRef} id="araf" className="text-2xl md:text-3xl text-end text-[#7AE2CF] tiny5-regular mr-8">
                     <span className="logo-char inline-block A">A</span>
                     <span className="logo-char inline-block R">R</span>
@@ -142,7 +153,13 @@ const Banner = () => {
                     <span className="logo-char inline-block F">F</span>
                 </div>
             </div>
-            <hr className="border-t border-[#077A7D] my-4 w-1/5 ml-8 md:ml-[320px]" />
+             <motion.hr 
+                className="border-t border-[#077A7D] my-4 w-1/5 ml-8 md:ml-[320px]"
+                initial={{ scaleX: 0 }}
+                animate={{ scaleX: 1 }}
+                transition={{ duration: 1, delay: 0.6 }}
+                style={{ originX: 0 }}
+            />
 
             <div className="gap-10 sm:gap-20 pl-8 md:pl-[320px] pt-10">
                 {/* Animated Designation Text */}
@@ -184,3 +201,5 @@ const Banner = () => {
 };
 
 export default Banner;
+
+
