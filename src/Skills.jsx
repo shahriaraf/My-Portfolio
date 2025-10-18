@@ -57,7 +57,7 @@ const Skills = () => {
   }, []);
 
   return (
-    <section className="bg-black mx-5 md:mx-10 md:pl-[320px] lg:mx-25 mt-20 py-10">
+    <section className="bg-black mx-5 md:mx-10 lg:pl-[220px] xl:pl-[320px] lg:mx-25 mt-20 py-10">
       <div className="container mx-auto px-4 py-10">
         <div className="text-white flex items-center justify-start ">
           <p className="uppercase oxanium text-xl px-2 rounded-full bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent font-semibold flex items-center gap-2">

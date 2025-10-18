@@ -36,7 +36,7 @@ const AboutMe = () => {
   return (
     <div
       ref={aboutRef}
-      className='bg-black mx-5 lg:mx-20 xl:mx-25 mt-20 py-30'
+      className='bg-black mx-5 lg:mx-30 xl:mx-25 mt-20 py-30'
     >
       <div className="fade-section flex items-center justify-center sm:justify-start sm:pl-10 lg:pl-[200px] xl:pl-[350px]">
         <p className="uppercase oxanium text-xl px-4 py-1 rounded-full bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent font-semibold flex items-center gap-2">
@@ -46,7 +46,7 @@ const AboutMe = () => {
 
       <hr className="fade-section border-t border-[#077A7D] my-4 w-2/5 sm:w-1/3 md:w-1/4 lg:w-1/5 ml-auto mr-auto sm:ml-10 lg:ml-[200px] xl:ml-[320px]" />
 
-      <p className='fade-section text-sm sm:text-base md:text-lg lg:text-xl text-gray-400 mt-6 px-5 sm:px-10 lg:pl-[160px] xl:pl-[320px] pt-10 text-justify'>
+      <p className='fade-section text-sm sm:text-base md:text-lg lg:text-xl text-gray-400 mt-6 px-5 sm:px-10 lg:pl-[210px] xl:pl-[320px] pt-10 text-justify'>
         I’m a passionate web developer and a Computer Science & Engineering student.
         My journey began with curiosity and a deep love for building things that live on the web.
         Over time, I’ve grown confident in working with technologies like React, Node.js, Firebase, and MongoDB —

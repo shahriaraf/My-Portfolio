@@ -21,22 +21,22 @@ const Contact = () => {
 
   return (
     <motion.section
-      className="bg-black mx-5 md:mx-25 mt-20 py-10"
+      className="bg-black mx-5 lg:mx-15 xl:mx-25 mt-20 py-10"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1, ease: "easeInOut" }}
     >
-      <div className="pl-5 md:pl-[350px] pt-5 text-white flex justify-start items-center">
+      <div className="pl-5 lg:pl-[280px] xl:pl-[350px] pt-5 text-white flex justify-start items-center">
         <p className="uppercase oxanium text-xl px-2 rounded-full bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent font-semibold flex items-center gap-2">
           <i className="fas fa-envelope bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent"></i>{" "}
           Contact
         </p>
       </div>
-      <hr className="border-t border-[#077A7D] my-4 w-1/2 md:w-1/5 ml-5 md:ml-80" />
+      <hr className="border-t border-[#077A7D] my-4 w-1/2 md:w-1/5 ml-5 lg:ml-70 xl:ml-80" />
       <br />
       <br />
 
-      <div className="pl-5 md:pl-[320px] pr-5">
+      <div className="pl-5 lg:pl-[260px] xl:pl-[320px] pr-5">
         <h2 className="text-2xl md:text-4xl font-bold text-center bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent mb-12">
           Let's Work Together
         </h2>

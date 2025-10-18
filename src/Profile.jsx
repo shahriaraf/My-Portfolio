@@ -39,7 +39,6 @@ const Profile = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   useLayoutEffect(() => {
-    // GSAP-like animations
     const elements = bannerRef.current?.querySelectorAll('.stagger-animate');
     elements?.forEach((el, index) => {
       el.style.opacity = '0';
@@ -64,18 +63,28 @@ const Profile = () => {
 
   return (
     <div>
-      {/* Geometric background elements */}
-      <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-10 w-2 h-2 bg-[#7AE2CF] rotate-45 opacity-60"></div>
-        <div className="absolute top-40 right-20 w-1 h-12 bg-gradient-to-b from-[#077A7D] to-transparent opacity-40"></div>
-        <div className="absolute bottom-32 left-1/4 w-3 h-3 bg-[#7AE2CF] rounded-full opacity-50"></div>
-        <div className="absolute top-1/3 right-10 w-px h-16 bg-gradient-to-b from-transparent via-[#7AE2CF] to-transparent opacity-30"></div>
-        <div className="absolute bottom-20 right-1/3 w-4 h-px bg-gradient-to-r from-transparent via-[#077A7D] to-transparent opacity-40"></div>
-      </div>
-
+      {/* --- RESPONSIVE LOGIC IS HERE --- */}
       <motion.div
         ref={bannerRef}
-        className="w-full max-w-sm md:max-w-[350px] mx-auto mt-15 mb-16 md:mt-20 md:mb-44 md:fixed md:ml-5 relative"
+        className="
+          relative w-full
+          
+          /* === MOBILE STYLES (< 768px) === */
+          /* Centered, in-flow content with vertical margin */
+          max-w-sm mx-auto my-16
+          
+          /* === TABLET STYLES (768px -> 1024px) === */
+          /* Still centered, but a little wider */
+          md:max-w-md
+          
+          /* === LAPTOP STYLES (1024px -> 1280px) === */
+          /* Switch to a SMALLER fixed sidebar */
+          lg:fixed lg:left-5 lg:top-24 lg:max-w-[280px] lg:mx-0 lg:my-0
+          
+          /* === DESKTOP STYLES (1280px+) === */
+          /* Make the sidebar a bit WIDER on large screens */
+          xl:max-w-[350px]
+        "
         onMouseMove={handleMouseMove}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
@@ -107,7 +116,7 @@ const Profile = () => {
               <div className="absolute -inset-1 bg-black rounded-md"></div>
               
               <motion.img
-                className="relative w-48 sm:w-52 md:w-60 rounded-md scale-110 z-10"
+                className="relative w-48 sm:w-52 md:w-50 xl:w-60 rounded-md scale-110 z-10"
                 src={myPhoto}
                 width={240}
                 height={320}
@@ -138,29 +147,10 @@ const Profile = () => {
             </div>
           </div>
 
-          {/* Creative typing animation section */}
-          <div className='flex justify-center items-center mt-6 stagger-animate'>
-            <motion.p 
-              className='text-lg mr-3 text-gray-200 font-medium relative'
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.8 }}
-            >
-              Creative
-              <span className="absolute -bottom-1 left-0 w-full h-px bg-gradient-to-r from-[#077A7D] to-transparent opacity-50"></span>
-            </motion.p>
-            
-            <div className="relative text-white">
-              <RotatingText
-                texts={['Thinker', 'Coder', 'Designer']}
-                rotationInterval={2500}
-              />
-            </div>
-          </div>
 
           {/* Social Links with creative hover effects */}
           <motion.div
-            className="flex justify-center gap-4 sm:gap-5 md:mt-3 mt-8 stagger-animate"
+            className="flex justify-center gap-4 sm:gap-5 mt-8 lg:mt-3 stagger-animate"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.5 }}
@@ -191,7 +181,7 @@ const Profile = () => {
           </motion.div>
 
           {/* Enhanced Resume Button */}
-          <div className="flex justify-center mb-10 md:mt-4 mt-8 stagger-animate">
+          <div className="flex justify-center mb-10 mt-8 lg:mt-4 stagger-animate">
             <motion.a
               href="/shoumo-shahriar-araf.pdf"
               download
@@ -243,4 +233,3 @@ const Profile = () => {
 };
 
 export default Profile;
-

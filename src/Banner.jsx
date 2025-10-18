@@ -131,7 +131,7 @@ const Banner = () => {
 
     return (
         <div className='bg-black mt-10 md:mx-25 py-10'>
-            <div className='pl-8 md:pl-[350px] pt-5 text-white flex justify-between items-center'>
+            <div className='pl-8 lg:pl-[230px] xl:pl-[350px]  pt-5 text-white flex justify-between items-center'>
                  <motion.p 
                     className='uppercase oxanium text-xl px-2 rounded-full bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent font-semibold flex items-center gap-2'
                     initial={{ opacity: 0, x: -50 }}
@@ -154,14 +154,14 @@ const Banner = () => {
                 </div>
             </div>
              <motion.hr 
-                className="border-t border-[#077A7D] my-4 w-1/5 ml-8 md:ml-[320px]"
+                className="border-t border-[#077A7D] my-4 w-1/5 ml-8 lg:ml-[220px] xl:ml-[320px] "
                 initial={{ scaleX: 0 }}
                 animate={{ scaleX: 1 }}
                 transition={{ duration: 1, delay: 0.6 }}
                 style={{ originX: 0 }}
             />
 
-            <div className="gap-10 sm:gap-20 pl-8 md:pl-[320px] pt-10">
+            <div className="gap-10 sm:gap-20 pl-8 lg:pl-[220px] xl:pl-[320px]  pt-10">
                 {/* Animated Designation Text */}
                 <motion.div
                     className="text-center sm:text-left"
@@ -184,7 +184,7 @@ const Banner = () => {
                         <span className="animate-pulse ml-1 bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent">|</span> {/* Blinking cursor */}
                     </motion.div>
                 </motion.div>
-                 <ShinyText text=" Crafting clean code, with a designer’s soul. Turning ideas into interactive, elegant experiences." disabled={false} speed={3} className='text-lg md:text-[22px] w-9/10 mx-auto md:mx-0 md:w-[700px] text-gray-400 text-center md:text-start' />
+                 <ShinyText text=" Crafting clean code, with a designer’s soul. Turning ideas into interactive, elegant experiences." disabled={false} speed={3} className='text-lg md:text-[22px] w-9/10 mx-auto md:mx-0 lg:w-[600px] xl:w-[700px] text-gray-400 text-center md:text-start' />
 
                 {/* Spinner */}
                 <div ref={banRef} className='flex justify-center md:justify-end md:pr-30 pt-10 pb-10'>
