@@ -10,7 +10,7 @@ const projects = [
   {
     name: "Aaryan Sourching",
     image:
-      "/public/asset/Minimalist Neutral Multi Device Computer Mockup Website Launch Instagram Post (1580 x 1080 px) (1780 x 1080 px) (1).png",
+      "/asset/Minimalist Neutral Multi Device Computer Mockup Website Launch Instagram Post (1580 x 1080 px) (1780 x 1080 px) (1).png",
     liveLink: "https://foodistic-3494a.web.app/",
     githubLink: "https://github.com/shahriaraf/foodistic-client",
     description:
@@ -18,7 +18,7 @@ const projects = [
   },
   {
     name: "Rentechify",
-    image: "/public/asset/Modern Neutral Digital Product Computer Mockup Promotional Instagram Post (1780 x 1080 px) (1).png",
+    image: "/asset/Modern Neutral Digital Product Computer Mockup Promotional Instagram Post (1780 x 1080 px) (1).png",
     liveLink: "https://rentechify.web.app/",
     githubLink: "https://github.com/codegeeksteam/RentifyTech",
     description:
@@ -27,7 +27,7 @@ const projects = [
 
    {
     name: "Leading University",
-    image: "/public/asset/Minimalist Neutral Multi Device Computer Mockup Website Launch Instagram Post (1780 x 1080 px).png",
+    image: "/asset/Minimalist Neutral Multi Device Computer Mockup Website Launch Instagram Post (1780 x 1080 px).png",
     liveLink: "https://foodistic-3494a.web.app/",
     githubLink: "https://github.com/shahriaraf/foodistic-client",
     description:
@@ -36,7 +36,7 @@ const projects = [
 
   {
     name: "Home Bite",
-    image: "/public/asset/Beige Minimalist Computer Mock Up Website Launch Instagram Post (1780 x 1080 px).png",
+    image: "/asset/Beige Minimalist Computer Mock Up Website Launch Instagram Post (1780 x 1080 px).png",
     liveLink: "https://foodistic-3494a.web.app/",
     githubLink: "https://github.com/shahriaraf/foodistic-client",
     description:
@@ -45,14 +45,14 @@ const projects = [
   {
     name: "Pet Haven",
     image:
-      "/public/asset/Beige Soft Mockup Launching New Website Facebook Post (1780 x 1080 px).png",
+      "/asset/Beige Soft Mockup Launching New Website Facebook Post (1780 x 1080 px).png",
     liveLink: "https://pet-haven-8d5ba.web.app/",
     githubLink: "https://github.com/shahriaraf/pet-haven-client",
     description: "Platform to adopt and donate for pets.",
   },
    {
     name: "Phermacon",
-    image: "/public/asset/Minimalist Website Launch Computer Mockup Instagram Post (1780 x 1080 px) (2).png",
+    image: "/asset/Minimalist Website Launch Computer Mockup Instagram Post (1780 x 1080 px) (2).png",
     liveLink: "https://foodistic-3494a.web.app/",
     githubLink: "https://github.com/shahriaraf/foodistic-client",
     description:
@@ -75,11 +75,11 @@ const Projects = () => {
       >
         {projects.map((project, index) => (
           <SwiperSlide key={index}>
-            <div className="w-full lg:h-full h-[70vh] bg-[#0A0A0A] border-2 border-[#7AE2CF] rounded-xl p-5 flex flex-col justify-between text-white shadow-lg">
+            <div className="w-full lg:h-full h-[500px] bg-[#0A0A0A] border-2 border-[#7AE2CF] rounded-xl p-5 flex flex-col justify-between text-white shadow-lg">
               <img
                 src={project.image}
                 alt={project.name}
-                className="w-full lg:h-84 lg:object-cover object-contain rounded-xl mb-4"
+                className="w-full h-full object-contain lg:object-cover rounded-xl mb-4"
               />
               <h3 className="text-[#7AE2CF] text-2xl font-bold mb-2 text-center">
                 {project.name}
