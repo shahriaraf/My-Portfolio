@@ -10,7 +10,7 @@ const projects = [
   {
     name: "Aaryan Sourching",
     image:
-      "../src/assets/Minimalist Neutral Multi Device Computer Mockup Website Launch Instagram Post (1580 x 1080 px) (1780 x 1080 px) (1).png",
+      "/Minimalist Neutral Multi Device Computer Mockup Website Launch Instagram Post (1580 x 1080 px) (1780 x 1080 px) (1).png",
     liveLink: "https://foodistic-3494a.web.app/",
     githubLink: "https://github.com/shahriaraf/foodistic-client",
     description:
@@ -18,7 +18,7 @@ const projects = [
   },
   {
     name: "Rentechify",
-    image: "../src/assets/Modern Neutral Digital Product Computer Mockup Promotional Instagram Post (1780 x 1080 px) (1).png",
+    image: "/Modern Neutral Digital Product Computer Mockup Promotional Instagram Post (1780 x 1080 px) (1).png",
     liveLink: "https://rentechify.web.app/",
     githubLink: "https://github.com/codegeeksteam/RentifyTech",
     description:
@@ -27,7 +27,7 @@ const projects = [
 
    {
     name: "Leading University",
-    image: "../src/assets/Minimalist Neutral Multi Device Computer Mockup Website Launch Instagram Post (1780 x 1080 px).png",
+    image: "/Minimalist Neutral Multi Device Computer Mockup Website Launch Instagram Post (1780 x 1080 px).png",
     liveLink: "https://foodistic-3494a.web.app/",
     githubLink: "https://github.com/shahriaraf/foodistic-client",
     description:
@@ -36,7 +36,7 @@ const projects = [
 
   {
     name: "Home Bite",
-    image: "../src/assets/Beige Minimalist Computer Mock Up Website Launch Instagram Post (1780 x 1080 px).png",
+    image: "/Beige Minimalist Computer Mock Up Website Launch Instagram Post (1780 x 1080 px).png",
     liveLink: "https://foodistic-3494a.web.app/",
     githubLink: "https://github.com/shahriaraf/foodistic-client",
     description:
@@ -45,14 +45,14 @@ const projects = [
   {
     name: "Pet Haven",
     image:
-      "../src/assets/Beige Soft Mockup Launching New Website Facebook Post (1780 x 1080 px).png",
+      "/Beige Soft Mockup Launching New Website Facebook Post (1780 x 1080 px).png",
     liveLink: "https://pet-haven-8d5ba.web.app/",
     githubLink: "https://github.com/shahriaraf/pet-haven-client",
     description: "Platform to adopt and donate for pets.",
   },
    {
     name: "Phermacon",
-    image: "../src/assets/Minimalist Website Launch Computer Mockup Instagram Post (1780 x 1080 px) (2).png",
+    image: "/Minimalist Website Launch Computer Mockup Instagram Post (1780 x 1080 px) (2).png",
     liveLink: "https://foodistic-3494a.web.app/",
     githubLink: "https://github.com/shahriaraf/foodistic-client",
     description:

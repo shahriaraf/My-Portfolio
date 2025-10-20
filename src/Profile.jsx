@@ -2,7 +2,7 @@ import React, { useLayoutEffect, useRef, useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 // Using your original image import
-import myPhoto from './assets/IMG_20250418_215624.jpg';
+import myPhoto from '../public/asset/IMG_20250418_215624.jpg';
 
 
 const RotatingText = ({ texts, rotationInterval = 2000 }) => {
