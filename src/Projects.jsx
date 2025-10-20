@@ -1,34 +1,63 @@
-import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { EffectCards } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/effect-cards';
-import { CgWebsite } from 'react-icons/cg';
-import { FaGithub } from 'react-icons/fa';
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { EffectCards } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/effect-cards";
+import { CgWebsite } from "react-icons/cg";
+import { FaGithub } from "react-icons/fa";
 
 const projects = [
   {
-    name: 'Home Bite',
-    image: 'https://i.ibb.co/8LLtXnXn/foodistic-3494a-web-app-2.png',
-    liveLink: 'https://foodistic-3494a.web.app/',
-    githubLink: 'https://github.com/shahriaraf/foodistic-client',
-    description: 'A food sharing website. Explore and share food with others.',
-  },
-    {
-    name: 'Rentechify',
-    image: 'https://i.ibb.co/WWSX7vq1/rentechify-web-app.png',
-    liveLink: 'https://rentechify.web.app/',
-    githubLink: 'https://github.com/codegeeksteam/RentifyTech',
-    description: 'Rentechify revolutionizes tech rentals with a seamless platform for on-demand access to premium gadgets and electronics.',
+    name: "Aaryan Sourching",
+    image:
+      "../src/assets/Minimalist Neutral Multi Device Computer Mockup Website Launch Instagram Post (1580 x 1080 px) (1780 x 1080 px) (1).png",
+    liveLink: "https://foodistic-3494a.web.app/",
+    githubLink: "https://github.com/shahriaraf/foodistic-client",
+    description:
+      "Buying House Project. A platform that connects buyers with reliable suppliers, streamlining the procurement process for businesses worldwide.",
   },
   {
-    name: 'Pet Haven',
-    image: 'https://i.ibb.co/WWY2xwpT/pet-haven-8d5ba-web-app-1.png',
-    liveLink: 'https://pet-haven-8d5ba.web.app/',
-    githubLink: 'https://github.com/shahriaraf/pet-haven-client',
-    description: 'Platform to adopt and donate for pets.',
+    name: "Rentechify",
+    image: "../src/assets/Modern Neutral Digital Product Computer Mockup Promotional Instagram Post (1780 x 1080 px) (1).png",
+    liveLink: "https://rentechify.web.app/",
+    githubLink: "https://github.com/codegeeksteam/RentifyTech",
+    description:
+      "Rentechify revolutionizes tech rentals with a seamless platform for on-demand access to premium gadgets and electronics.",
   },
 
+   {
+    name: "Leading University",
+    image: "../src/assets/Minimalist Neutral Multi Device Computer Mockup Website Launch Instagram Post (1780 x 1080 px).png",
+    liveLink: "https://foodistic-3494a.web.app/",
+    githubLink: "https://github.com/shahriaraf/foodistic-client",
+    description:
+      "A food delivery app that connects users with local restaurants for quick and easy meal orders.",
+  },
+
+  {
+    name: "Home Bite",
+    image: "../src/assets/Beige Minimalist Computer Mock Up Website Launch Instagram Post (1780 x 1080 px).png",
+    liveLink: "https://foodistic-3494a.web.app/",
+    githubLink: "https://github.com/shahriaraf/foodistic-client",
+    description:
+      "A food delivery app that connects users with local restaurants for quick and easy meal orders.",
+  },
+  {
+    name: "Pet Haven",
+    image:
+      "../src/assets/Beige Soft Mockup Launching New Website Facebook Post (1780 x 1080 px).png",
+    liveLink: "https://pet-haven-8d5ba.web.app/",
+    githubLink: "https://github.com/shahriaraf/pet-haven-client",
+    description: "Platform to adopt and donate for pets.",
+  },
+   {
+    name: "Phermacon",
+    image: "../src/assets/Minimalist Website Launch Computer Mockup Instagram Post (1780 x 1080 px) (2).png",
+    liveLink: "https://foodistic-3494a.web.app/",
+    githubLink: "https://github.com/shahriaraf/foodistic-client",
+    description:
+      "A food delivery app that connects users with local restaurants for quick and easy meal orders.",
+  },
 ];
 
 const Projects = () => {
@@ -39,18 +68,18 @@ const Projects = () => {
       </h2>
 
       <Swiper
-        effect={'cards'}
+        effect={"cards"}
         grabCursor={true}
         modules={[EffectCards]}
         className="lg:w-[520px] xl:w-[700px] lg:h-[520px] w-[300px] h-[500px]"
       >
         {projects.map((project, index) => (
           <SwiperSlide key={index}>
-            <div className="w-full h-full bg-[#0A0A0A] border-2 border-[#7AE2CF] rounded-xl p-5 flex flex-col justify-between text-white shadow-lg">
+            <div className="w-full lg:h-full h-[70vh] bg-[#0A0A0A] border-2 border-[#7AE2CF] rounded-xl p-5 flex flex-col justify-between text-white shadow-lg">
               <img
                 src={project.image}
                 alt={project.name}
-                className="w-full h-84 object-cover rounded-xl mb-4"
+                className="w-full lg:h-84 lg:object-cover object-contain rounded-xl mb-4"
               />
               <h3 className="text-[#7AE2CF] text-2xl font-bold mb-2 text-center">
                 {project.name}
