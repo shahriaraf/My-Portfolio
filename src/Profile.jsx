@@ -2,7 +2,8 @@ import React, { useLayoutEffect, useRef, useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 // Using your original image import
-import myPhoto from '../public/asset/IMG_20250418_215624.jpg';
+import myPhoto from '../public/asset/MyPhoto.svg';
+
 
 
 const RotatingText = ({ texts, rotationInterval = 2000 }) => {
@@ -93,7 +94,7 @@ const Profile = () => {
         transition={{ duration: 1, ease: "easeOut" }}
       >
         {/* Main container with enhanced border effect */}
-        <div className="relative bg-black border-2 border-[#1e3640] rounded-[30px] overflow-hidden backdrop-blur-sm">
+        <div className="relative bg-black border-2 border-[#1e3640] rounded-[30px] lg:max-h-80vh overflow-hidden backdrop-blur-sm">
           {/* Animated corner accents */}
           <div className="absolute top-0 left-0 w-16 h-16 border-l-2 border-t-2 border-[#7AE2CF] rounded-tl-[30px] opacity-60"></div>
           <div className="absolute bottom-0 right-0 w-16 h-16 border-r-2 border-b-2 border-[#7AE2CF] rounded-br-[30px] opacity-60"></div>
@@ -116,7 +117,7 @@ const Profile = () => {
               <div className="absolute -inset-1 bg-black rounded-md"></div>
               
               <motion.img
-                className="relative w-48 sm:w-52 md:w-50 xl:w-60 rounded-md scale-110 z-10"
+                className="relative lg:w-56 w-52 md:w-50 rounded-md scale-110 z-10"
                 src={myPhoto}
                 width={240}
                 height={320}
@@ -131,26 +132,20 @@ const Profile = () => {
           </div>
 
           {/* Enhanced Info Section */}
-          <div className="text-center mt-10 sm:mt-14 text-gray-400 font-bold px-4 stagger-animate">
+          <div className="text-center mt-7 text-gray-400 font-bold px-4 stagger-animate">
             <motion.p 
-              className="bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent text-lg hover:text-[#7AE2CF] transition-all duration-300 break-words relative group cursor-pointer"
+              className="bg-gradient-to-r from-white via-[#7AE2CF] to-white bg-clip-text text-transparent text-lg hover:text-[#7AE2CF] transition-all duration-300 break-words relative group cursor-pointer"
               whileHover={{ scale: 1.05 }}
             >
               shahriaraf01@gmail.com
               <span className="absolute bottom-0 left-0 w-0 h-px bg-[#7AE2CF] group-hover:w-full transition-all duration-300"></span>
             </motion.p>
-            
-            <div className="flex items-center justify-center gap-2 mt-2">
-              <div className="w-1 h-1 bg-[#7AE2CF] rounded-full"></div>
-              <p className="text-gray-300">Sylhet, Bangladesh</p>
-              <div className="w-1 h-1 bg-[#7AE2CF] rounded-full"></div>
-            </div>
           </div>
 
 
           {/* Social Links with creative hover effects */}
           <motion.div
-            className="flex justify-center gap-4 sm:gap-5 mt-8 lg:mt-3 stagger-animate"
+            className="flex justify-center lg:gap-4 gap-6 mt-8 lg:mt-0 stagger-animate"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.5 }}
@@ -166,7 +161,7 @@ const Profile = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={social.label}
-                className="relative group text-2xl sm:text-3xl p-3 sm:p-4 rounded-full overflow-hidden"
+                className="relative group text-2xl p-3 sm:p-4 rounded-full overflow-hidden"
                 whileHover={{ 
                   scale: 1.2,
                   rotate: [0, -5, 5, 0],
@@ -181,15 +176,15 @@ const Profile = () => {
           </motion.div>
 
           {/* Enhanced Resume Button */}
-          <div className="flex justify-center mb-10 mt-8 lg:mt-4 stagger-animate">
+          <div className="flex justify-center mb-10 mt-8 lg:mt-1 stagger-animate">
             <motion.a
-              href="/shoumo-shahriar-araf.pdf"
+              href="../public/Professional Docs & Interview Prep Resume in Black White UConn Brand Style.pdf"
               download
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               <button
-                className="group relative rounded-full bg-transparent border-2 border-[#7AE2CF] text-base sm:text-lg font-semibold px-6 sm:px-12 py-2 text-[#7AE2CF] hover:text-black transition-colors duration-300 overflow-hidden"
+                className="group relative rounded-full bg-transparent border-2 border-[#7AE2CF] text-base sm:text-lg font-semibold lg:px-10 px-10 py-2 lg:py-1 text-[#7AE2CF] hover:text-black transition-colors duration-300 overflow-hidden"
                 style={{ 
                   boxShadow: '0 0 20px rgba(122, 226, 207, 0.3)',
                   transition: 'all 0.3s ease'
@@ -202,7 +197,7 @@ const Profile = () => {
                 }}
               >
                 <span className="absolute inset-0 bg-[#7AE2CF] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
-                <span className="relative z-10 flex items-center gap-2">
+                <span className="relative z-10 flex items-center gap-2 lg:text-lg lg:font-semibold">
                   Resume 
                   <motion.i 
                     className="fa-solid fa-arrow-down"

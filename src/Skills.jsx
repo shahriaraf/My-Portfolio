@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import html from '../public/asset/html5.svg';
 import css from '../public/asset/css3.svg';
-import js from '../public/asset/javascript.svg';
+import js from '../public/asset/javascript-icon-png-13.jpg';
 import reactLogo from '../public/asset/react.svg';
 import next from '../public/asset/nextdotjs.svg';
 import tailwind from '../public/asset/tailwindcss.svg';
@@ -14,6 +14,11 @@ import mysql from '../public/asset/mysql.svg';
 import firebase from '../public/asset/firebase.svg';
 import github from '../public/asset/github.svg';
 import framer from '../public/asset/framer.svg';
+import docker from '../public/asset/docker.svg';
+import nest from '../public/asset/Nestjs--Streamline-Simple-Icons.svg';
+import gitlab from '../public/asset/Gitlab--Streamline-Bootstrap.svg';
+import postman from '../public/asset/postman-svgrepo-com.svg';
+import figma from '../public/asset/Figma-Logo--Streamline-Ultimate.png';
 import gsap from 'gsap';
 
 const frontendSkills = [
@@ -22,29 +27,40 @@ const frontendSkills = [
   { name: 'JavaScript', logo: js, bg: '#7AE2CF' },
   { name: 'React', logo: reactLogo, bg: '#7AE2CF' },
   { name: 'Next.js', logo: next, bg: '#7AE2CF' },
+  { name: 'Redux', logo: redux, bg: '#7AE2CF' },
   { name: 'Tailwind CSS', logo: tailwind, bg: '#7AE2CF' },
   { name: 'Bootstrap', logo: bootstrap, bg: '#7AE2CF' },
+  
 ];
 
 const backendSkills = [
   { name: 'Node.js', logo: node, bg: '#7AE2CF' },
   { name: 'Express.js', logo: express, bg: '#7AE2CF' },
+  { name: 'NestJS', logo: nest, bg: '#7AE2CF' },
   { name: 'MongoDB', logo: mongodb, bg: '#7AE2CF' },
   { name: 'MySQL', logo: mysql, bg: '#7AE2CF' },
   { name: 'Firebase', logo: firebase, bg: '#7AE2CF' },
+  
+];
+const devopsSkills = [
+  { name: 'Docker', logo: docker, bg: '#7AE2CF' },
+  { name: 'GitHub', logo: github, bg: '#7AE2CF' },
+  { name: 'GitLab', logo: gitlab, bg: '#7AE2CF' },
+
+
 ];
 
 const toolSkills = [
-  { name: 'Redux', logo: redux, bg: '#7AE2CF' },
   { name: 'Framer Motion', logo: framer, bg: '#7AE2CF' },
-  { name: 'GitHub', logo: github, bg: '#7AE2CF' },
+  { name: 'Postman', logo: postman, bg: '#7AE2CF' },
+  { name: 'Figma', logo: figma, bg: '#7AE2CF' },
 ];
 
 const Skills = () => {
   useEffect(() => {
     gsap.fromTo(
       '.skill-icon',
-      { y: 0, scale: 1 },
+      { y: 0, scale: 1.2 },
       {
         scale: 1.8,
         duration: 1,
@@ -70,7 +86,7 @@ const Skills = () => {
           My Advantages
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-8 pt-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 md:gap-8 pt-10">
           {/* Frontend */}
           <div className="bg-black rounded-4xl border border-[#1e3640] p-6 flex flex-col items-center" style={{ boxShadow: '0 0 15px 0.5px #7AE2CF' }}>
             <h3 className="text-2xl font-semibold mb-4 bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent">
@@ -81,14 +97,14 @@ const Skills = () => {
               {frontendSkills.map((skill) => (
                 <div
                   key={skill.name}
-                  className="w-16 h-16 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transform transition"
+                  className="w-18 h-18 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transform transition"
                   style={{ backgroundColor: skill.bg }}
                   title={skill.name}
                 >
                   <img
                     src={skill.logo}
                     alt={skill.name}
-                    className="w-8 h-8 skill-icon"
+                    className="w-9 h-9 skill-icon"
                   />
                 </div>
               ))}
@@ -105,14 +121,37 @@ const Skills = () => {
               {backendSkills.map((skill) => (
                 <div
                   key={skill.name}
-                  className="w-16 h-16 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transform transition"
+                  className="w-18 h-18 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transform transition"
                   style={{ backgroundColor: skill.bg }}
                   title={skill.name}
                 >
                   <img
                     src={skill.logo}
                     alt={skill.name}
-                    className="w-8 h-8 skill-icon"
+                    className="w-9 h-9 skill-icon"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+          {/* Devops */}
+          <div className="bg-black rounded-4xl border border-[#1e3640] p-6 flex flex-col items-center" style={{ boxShadow: '0 0 15px 0.5px #7AE2CF' }}>
+            <h3 className="text-2xl font-semibold mb-4 bg-gradient-to-r from-[#077A7D] via-[#7AE2CF] to-[#7AE2CF] bg-clip-text text-transparent">
+              <i className="fas fa-cogs mr-2"></i>
+              Devops
+            </h3><br />
+            <div className="flex flex-wrap justify-center gap-4">
+              {devopsSkills.map((skill) => (
+                <div
+                  key={skill.name}
+                  className="w-18 h-18 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transform transition"
+                  style={{ backgroundColor: skill.bg }}
+                  title={skill.name}
+                >
+                  <img
+                    src={skill.logo}
+                    alt={skill.name}
+                    className="w-9 h-9 skill-icon"
                   />
                 </div>
               ))}
@@ -129,14 +168,14 @@ const Skills = () => {
               {toolSkills.map((skill) => (
                 <div
                   key={skill.name}
-                  className="w-16 h-16 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transform transition"
+                  className="w-18 h-18 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transform transition"
                   style={{ backgroundColor: skill.bg }}
                   title={skill.name}
                 >
                   <img
                     src={skill.logo}
                     alt={skill.name}
-                    className="w-8 h-8 skill-icon"
+                    className="w-9 h-9 skill-icon"
                   />
                 </div>
               ))}

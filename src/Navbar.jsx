@@ -41,9 +41,9 @@ const Navbar = ({ onSetActive }) => {
             {/* Desktop Navbar */}
             <nav
                 ref={navRef}
-                className="hidden md:flex fixed top-0 right-0 h-[544px] w-16 rounded-full bg-black border-2 border-[#1e3640] z-10 pl-3 mt-20 mr-5 pt-40 flex-col items-start gap-10"
+                className="hidden lg:flex md:hidden fixed top-0 right-0 lg:h-[425px] w-16 rounded-full bg-black border-2 border-[#1e3640] z-10 pl-3 mt-24 mr-5 lg:pt-20 flex-col items-start gap-10"
             >
-                <ul className="flex flex-col justify-center items-center gap-8 text-[#7AE2CF] mr-20">
+                <ul className="flex flex-col justify-center items-center gap-8 text-[#7AE2CF]">
                     {menuItems.map((item) => (
                         <li key={item.id} id={item.id}>
                             <Link
